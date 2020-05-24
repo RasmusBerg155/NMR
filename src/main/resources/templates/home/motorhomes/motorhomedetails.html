@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="MotorhomeCSS.css">
+</head>
+<body>
+<h1>Motorhome Details</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Motorhome_Detail_ID</th>
+        <th>KM</th>
+        <th>Passengers</th>
+        <th>Price_Per_Day</th>
+        <th>Extra</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="motorhomedetails: ${motorhomedetails}">
+        <td th:text="${motorhomedetails.Motorhome_detail_id}"></td>
+        <td th:text="${motorhomedetails.Km}"></td>
+        <td th:text="${motorhomedetails.Passengers}"></td>
+        <td th:text="${motorhomedetails.Price_per_day}"></td>
+        <td th:text="${motorhomedetails.Extra}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="CustomerCSS.css">
+</head>
+<body>
+<h1>Customer List</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Customer_ID</th>
+        <th>First_Name</th>
+        <th>Last_Name</th>
+        <th>Contact_ID</th>
+        <th>Address_ID</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="customers: ${customers}">
+        <td th:text="${customers.Customer_id}"></td>
+        <td th:text="${customers.First_name}"></td>
+        <td th:text="${customers.Last_name}"></td>
+        <td th:text="${customers.Contact_id}"></td>
+        <td th:text="${customers.Address_id}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
