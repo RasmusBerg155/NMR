@@ -6,17 +6,20 @@
     <link rel="stylesheet" type="text/css" href="MotorhomeCSS.css">
 </head>
 <body>
-<h1>Motorhome List</h1>
+    <h1>Motorhome List</h1>
+    <a href="/create">
+        <button class ="btn-create" id="btn-create">Create new Motorhome</button>
+    </a>
 
-<table>
-    <thead>
-    <tr>
-        <th>Motorhome_ID</th>
-        <th>Brand</th>
-        <th>Model</th>
-        <th>MotorhomeDetail_ID</th>
+    <table>
+        <thead>
+        <tr>
+            <th>Motorhome_ID</th>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>MotorhomeDetail_ID</th>
     </tr>
-    </thead>
+        </thead>
     <tbody>
     <tr th:each="motorhomes: ${motorhomes}">
         <td th:text="${motorhomes.Motorhome_id}">

@@ -21,6 +21,8 @@ public class MotorhomeRepo {
     }
 
     public Motorhome addMotorhome(Motorhome m){
+        String sql = "INSERT INTO motorhomes(motorhome_id, brand, model, motorhome_detail_id) VALUES (?, ?, ?, ?)";
+        template.update(sql, m.getMotorhome_id(), m.getBrand(), m.getModel(), m.getMotorhome_detail_id());
         return null;
     }
 
