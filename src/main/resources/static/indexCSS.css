@@ -1,21 +1,21 @@
-table{
+ table{
     border-collapse: collapse;
     width: 100%;
 }
 th{
-    background-color: lightblue;
+    background-color: rebeccapurple;
 }
 td, th{
-    border: 2px orange;
+    border: 2px whitesmoke;
     text-align: left;
     padding: 8px;
 }
 tr:nth-child(even){
-    background-color: lightgray;
+    background-color: whitesmoke;
 }
 
 body{
-    background-color: lime;
+    background-color: white;
 }
 
 .btn{
@@ -26,9 +26,9 @@ body{
 }
 
 .btn:hover{
-    box-shadow: 2px 2px 2px yellow;
+    box-shadow: 2px 2px 2px red;
 }
 
 #btn-showMotorhomes{
-    background-color: greenyellow;
+    background-color: white;
 }

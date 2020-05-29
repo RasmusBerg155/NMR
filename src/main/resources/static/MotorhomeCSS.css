@@ -3,7 +3,7 @@ table{
     width: 40%;
 }
 th{
-    background-color: lightblue;
+    background-color: #a02626;
 }
 td, th{
     border: 1px solid black;
@@ -11,9 +11,9 @@ td, th{
     padding: 4px;
 }
 tr:nth-child(even){
-    background-color: lightgray;
+    background-color: whitesmoke;
 }
 
 body{
-    background-color: lime;
+    background-color: whitesmoke;
 }
