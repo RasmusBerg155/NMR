@@ -16,8 +16,8 @@ public class CustomerService {
         return customerRepo.fetchAll();
     }
 
-    public Customer addCustomer(Customer m){
-        return customerRepo.addCustomer(m);
+    public Customer addCustomer(Customer c){
+        return customerRepo.addCustomer(c);
     }
 
     public Customer findCustomerById(int customer_id){
@@ -28,8 +28,8 @@ public class CustomerService {
         return CustomerRepo.deleteCustomer(customer_id);
     }
 
-    public Customer updateCustomer(int customer_id, Customer m){
-        return CustomerRepo.updateCustomer(customer_id, m);
+    public Customer updateCustomer(int customer_id, Customer c){
+        return CustomerRepo.updateCustomer(customer_id, c);
     }
 }
 

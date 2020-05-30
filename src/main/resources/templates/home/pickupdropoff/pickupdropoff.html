@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="MotorhomeCSS.css">
+</head>
+<body>
+    <table>
+        <thead>
+        <tr>
+            <th>Pick-off and drop-off Id</th>
+            <th>Pick-up location</th>
+            <th>Pick-up distance</th>
+            <th>Drop-off location</th>
+            <th>Drop-off distance</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="pickupdropoff: ${pickupdropoff}">
+            <td th:text="${pickupdropoff.pd_id}">
+            <td th:text="${pickupdropoff.pick_up_location}">
+            <td th:text="${pickupdropoff.pick_up_distance}">
+            <td th:text="${pickupdropoff.drop_off_location}">
+            <td th:text="${pickupdropoff.drop_off_distance}">
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>

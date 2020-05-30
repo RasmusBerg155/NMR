@@ -18,16 +18,16 @@
             <th>Brand</th>
             <th>Model</th>
             <th>MotorhomeDetail_ID</th>
-    </tr>
+        </tr>
         </thead>
-    <tbody>
-    <tr th:each="motorhomes: ${motorhomes}">
-        <td th:text="${motorhomes.Motorhome_id}">
-        <td th:text="${motorhomes.Brand}">
-        <td th:text="${motorhomes.Model}">
-        <td th:text="${motorhomes.Motorhome_detail_id}">
-    </tr>
-    </tbody>
-</table>
+        <tbody>
+        <tr th:each="motorhomes: ${motorhomes}">
+            <td th:text="${motorhomes.motorhome_id}">
+            <td th:text="${motorhomes.brand}">
+            <td th:text="${motorhomes.model}">
+            <td th:text="${motorhomes.motorhome_detail_id}">
+        </tr>
+        </tbody>
+    </table>
 </body>
 </html>
