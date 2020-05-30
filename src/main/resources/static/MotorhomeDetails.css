@@ -3,7 +3,7 @@ table{
     width: 40%;
 }
 th{
-    background-color: lightblue;
+    background-color: transparent;
 }
 td, th{
     border: 1px solid black;
@@ -11,36 +11,36 @@ td, th{
     padding: 4px;
 }
 tr:nth-child(even){
-    background-color: lightgray;
+    background-color: transparent;
 }
 
 body{
-    background-color: lime;
+    background-color: transparent;
 }
 
 .btn{
   border: none;
-  color: lightpink;
+  color: transparent;
   padding: 7px 10px;
   text-align: center;
 }
 
 .btn:hover{
-    box-shadow: 2px 2px 2px lightblue;
+    box-shadow: 2px 2px 2px transparent;
 }
 
 #btn-createMotorhomeDetails{
-    background-color: plum;
+    background-color: transparent;
 }
 
 #btn-viewOneMotorhomeDetail{
-    background-color: antiquewhite;
+    background-color: transparent;
 }
 
 #btn-deleteMotorhomeDetails{
-    background-color: cadetblue;
+    background-color: transparent;
 }
 
 #btn-updateMotorhomeDetails{
-    background-color: rosybrown;
+    background-color: transparent;
 }

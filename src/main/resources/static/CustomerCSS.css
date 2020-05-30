@@ -3,17 +3,17 @@ table{
     width: 40%;
 }
 th{
-    background-color: lightblue;
+    background-color: transparent;
 }
 td, th{
-    border: 1px solid black;
+    border: 1px transparent;
     text-align: left;
     padding: 4px;
 }
 tr:nth-child(even){
-    background-color: lightgray;
+    background-color: transparent;
 }
 
 body{
-    background-color: lime;
+    background-color: transparent;
 }
