@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="CustomerCSS.css">
+</head>
+<body>
+
+    <h1>Customer Contacts</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Contact ID</th>
+            <th>E_mail</th>
+            <th>Phone Number</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="customerContacts: ${customerContacts}">
+            <td th:text="${customerContacts.contact_id}">
+            <td th:text="${customerContacts.e_mail}">
+            <td th:text="${customerContacts.phone}">
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>

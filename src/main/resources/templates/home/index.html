@@ -2,12 +2,12 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>NMR</title>
     <link rel="stylesheet" type="text/css" href="indexCSS.css">
+    <link rel="stylesheet" href="MenuStyles.css">
 </head>
 <body>
     <h1>WELCOME TO NORDIC MOTORHOMES RENTAL</h1>
-
 
     <a href="/ShowMotorhomes">
         <button class="btn-showMotorhomes" id="btn-showMotorhomes">
@@ -21,16 +21,33 @@
         </button>
     </a>
 
-    <a href="/ShowCustomer">
+    <a href="/ShowCustomerContracts">
+        <button class="btn-showCustomerContracts" id="btn-showCustomerContracts">
+            List of Costumer Contracts details
+        </button>
+    </a>
+ <!--  THIS FUNCTION IS UNDER REVIEW AND IS TEMPORARILY ELIMINATED 
+
+  <a href="/ShowCustomer">
         <button class="btn-showCustomers" id="btn-showCustomers">
             List of Customers
         </button>
     </a>
+
+    -->
 
     <a href="/ShowPickUpDropOff">
         <button class="btn-showPickUpDropOff" id="btn-showPickUpDropOff">
             List of Pick-up and drop-offs
         </button>
     </a>
+
+<!-- this is an experimental feature of a NAVIGATION MENU,
+under construction by Alexandru Gabriel -->
+    <ul>
+        <li><a href="#">MOTORHOMES</a></li>
+        <li><a href="#">CUSTOMERS</a></li>
+        <li><a href="#">RENTAL CONTRACTS</a></li>
+    </ul>
 </body>
 </html>

@@ -1,5 +1,6 @@
 package com.demo.nmr.Service;
 
+
 import com.demo.nmr.Model.Customer;
 import com.demo.nmr.Repository.CustomerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,11 +26,10 @@ public class CustomerService {
     }
 
     public Boolean deleteCustomer(int customer_id){
-        return CustomerRepo.deleteCustomer(customer_id);
+        return customerRepo.deleteCustomer(customer_id);
     }
 
     public Customer updateCustomer(int customer_id, Customer c){
-        return CustomerRepo.updateCustomer(customer_id, c);
+        return customerRepo.updateCustomer(customer_id, c);
     }
 }
-

@@ -1,0 +1,275 @@
+Index: src/main/java/com/demo/nmr/Model/CustomerContacts.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/com/demo/nmr/Model/CustomerContacts.java	(date 1590859529571)
++++ src/main/java/com/demo/nmr/Model/customerContacts.java	(date 1590859529571)
+@@ -1,15 +1,15 @@
+ package com.demo.nmr.Model;
+-import javax.persistence.Entity;
++/* import javax.persistence.Entity;
+ import javax.persistence.Id;
+ 
+ @Entity
+-public class CustomerContacts {
++public class customerContacts {
+     @Id
+     private int contact_id;
+     private String e_mail;
+     private String phone;
+ 
+-    public CustomerContacts() {
++    public customerContacts() {
+     }
+ 
+     public int getContact_id() {
+@@ -35,4 +35,4 @@
+     public void setPhone(String phone) {
+         this.phone = phone;
+     }
+-}
++} */
+Index: src/main/java/com/demo/nmr/Model/CustomerAddresses.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/com/demo/nmr/Model/CustomerAddresses.java	(date 1590859529571)
++++ src/main/java/com/demo/nmr/Model/customerAddresses.java	(date 1590859529571)
+@@ -1,4 +1,4 @@
+ package com.demo.nmr.Model;
+ 
+-public class CustomerAddresses {
++public class customerAddresses {
+ }
+Index: src/main/java/com/demo/nmr/Service/CustomerService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/com/demo/nmr/Service/CustomerService.java	(date 1590859529574)
++++ src/main/java/com/demo/nmr/Service/CustomerService.java	(date 1590859529574)
+@@ -1,3 +1,5 @@
++/* THIS FUNCTION IS UNDER REVIEW AND IS TEMPORARILY ELIMINATED
++
+ package com.demo.nmr.Service;
+ 
+ 
+@@ -32,4 +34,5 @@
+     public Customer updateCustomer(int customer_id, Customer c){
+         return customerRepo.updateCustomer(customer_id, c);
+     }
+-}
+\ No newline at end of file
++}
++*/
+Index: src/main/java/com/demo/nmr/Service/CustomerContactsService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/com/demo/nmr/Service/CustomerContactsService.java	(date 1590859529575)
++++ src/main/java/com/demo/nmr/Service/customerContactsService.java	(date 1590859529575)
+@@ -1,30 +1,31 @@
+ package com.demo.nmr.Service;
+ 
+-import com.demo.nmr.Model.CustomerContacts;
+-import com.demo.nmr.Repository.CustomerContactsRepo;
++/* import com.demo.nmr.Model.customerContacts;
++import com.demo.nmr.Repository.customerContactsRepo;
+ import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.stereotype.Service;
+ import java.util.List;
+ 
+ @Service
+-public class CustomerContactsService {
++public class customerContactsService {
+     @Autowired
+-    CustomerContactsRepo customerContactsRepo;
++    customerContactsRepo customerContactsRepo;
+ 
+-    public List<CustomerContacts> fetchAll(){
+-        return customerContactsRepo.fetchAll();
++    public <customerContacts> List<customerContacts> fetchAll(){
++        //return customerContactsRepo.fetchAll();
++        return null;
+     }
+-    public CustomerContacts addCustomerContacts(CustomerContacts c){
+-        return customerContactsRepo.addCustomerContacts(c);
++    public customerContacts addcustomerContacts(customerContacts C){
++        return customerContactsRepo.addcustomerContacts(C);
+     }
+-    public CustomerContacts findCustomerContactById(int contact_id){
++    public customerContacts findCustomerContactById(int contact_id){
+         return customerContactsRepo.findCustomerContactById(contact_id);
+     }
+-    public boolean deleteCustomerContacts (int id){
++    public Boolean deleteCustomerContacts (int id){
+ 
+         return customerContactsRepo.deleteCustomerContacts(id);
+     }
+-    public CustomerContacts updateCustomerContacts(int id, CustomerContacts c){
+-        return customerContactsRepo.updateCustomerContacts(id, c);
++    public customerContacts updateCustomerContacts(int id, customerContacts C){
++        return customerContactsRepo.updateCustomerContacts(id, C);
+     }
+-}
++}  */
+Index: src/main/java/com/demo/nmr/Service/CustomerAddressesService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/com/demo/nmr/Service/CustomerAddressesService.java	(date 1590859529575)
++++ src/main/java/com/demo/nmr/Service/customerAddressesService.java	(date 1590859529575)
+@@ -1,4 +1,4 @@
+ package com.demo.nmr.Service;
+ 
+-public class CustomerAddressesService {
++public class customerAddressesService {
+ }
+Index: src/main/java/com/demo/nmr/Controller/MotorhomeController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/com/demo/nmr/Controller/MotorhomeController.java	(date 1590859569221)
++++ src/main/java/com/demo/nmr/Controller/MotorhomeController.java	(date 1590859569221)
+@@ -22,7 +22,6 @@
+         model.addAttribute("motorhomes", motorhomeList);
+         return "home/motorhomes/motorhomes";
+     }
+-
+     @GetMapping("/create")
+         public String create(){
+          return "home/motorhomes/CreateMhomes";
+Index: src/main/java/com/demo/nmr/Controller/CustomerAddressesController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/com/demo/nmr/Controller/CustomerAddressesController.java	(date 1590859529569)
++++ src/main/java/com/demo/nmr/Controller/customerAddressesController.java	(date 1590859529569)
+@@ -1,4 +1,4 @@
+ package com.demo.nmr.Controller;
+ 
+-public class CustomerAddressesController {
++public class customerAddressesController {
+ }
+Index: src/main/java/com/demo/nmr/Controller/CustomerController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/com/demo/nmr/Controller/CustomerController.java	(date 1590860226601)
++++ src/main/java/com/demo/nmr/Controller/customerController.java	(date 1590860226601)
+@@ -1,5 +1,5 @@
+-
++// THIS FUNCTION IS UNDER REVIEW AND IS TEMPORARILY ELIMINATED
+ package com.demo.nmr.Controller;
+ 
+-public class CustomerController {
++public class customerController {
+ }
+Index: src/main/java/com/demo/nmr/Controller/CustomerContactsController.java
+===================================================================
+--- src/main/java/com/demo/nmr/Controller/CustomerContactsController.java	(date 0)
++++ src/main/java/com/demo/nmr/Controller/CustomerContactsController.java	(date 0)
+@@ -1,65 +0,0 @@
+-package com.demo.nmr.Controller;
+-
+-import com.demo.nmr.Model.CustomerContacts;
+-import com.demo.nmr.Service.CustomerContactsService;
+-import org.springframework.beans.factory.annotation.Autowired;
+-import org.springframework.stereotype.Controller;
+-import org.springframework.ui.Model;
+-import org.springframework.web.bind.annotation.GetMapping;
+-import org.springframework.web.bind.annotation.ModelAttribute;
+-import org.springframework.web.bind.annotation.PathVariable;
+-import org.springframework.web.bind.annotation.PostMapping;
+-import java.util.List;
+-
+-@Controller
+-public class CustomerContactsController {
+-
+-    @Autowired
+-    CustomerContactsService customerContactsService;
+-
+-    @GetMapping("/ShowCustomerContacts")
+-    public String showCustomerContacts(Model model){
+-        List<CustomerContacts> customerContactsList = customerContactsService.fetchAll();
+-        model.addAttribute("customerContacts", customerContactsList);
+-        return "home/customer/customerContacts";
+-    }
+-/*
+-    @GetMapping("/CreateCustomerContact")
+-    public String CreateCustomerContact(){
+-        return "home/customer/CreateCustomerContact";
+-    }
+-
+-    @PostMapping("/CreateCustomerContact")
+-    public String CreateCustomerContact(@ModelAttribute CustomerContacts customerContacts){
+-        customerContactsService.addCustomerContacts(customerContacts);
+-        return "redirect:/";
+-    }
+-
+-    @GetMapping("/SeeOneContact/{contact_id}")
+-    public String SeeOneContact(@PathVariable("contact_id") int contact_id, Model model){
+-        model.addAttribute("customerContacts", customerContactsService.findCustomerContactById(contact_id));
+-        return "home/customer/SeeOneContact";
+-    }
+-
+-    @GetMapping("/DeleteCustomerContacts/{contact_id}")
+-    public String DeleteCustomerContacts(@PathVariable("contact_id") int contact_id){
+-        boolean CustomerContactsDeleted = customerContactsService.deleteCustomerContacts(contact_id);
+-        if (CustomerContactsDeleted){
+-            return "redirect:/";
+-        }else{
+-            return "redirect:/";
+-        }
+-    }
+-
+-    @GetMapping("/UpdateCustomerContacts/{contact_id}")
+-    public String UpdateCustomerContacts(@PathVariable("contact_id") int contact_id, Model model){
+-        model.addAttribute("customerContacts", customerContactsService.findCustomerContactById(contact_id));
+-        return "home/customer/UpdateCustomerContacts";  //the "customerContact" must be the same written in HTML
+-    }
+-
+-    @PostMapping("/UpdateCustomerContacts")
+-    public String UpdateCustomerContacts(@ModelAttribute CustomerContacts customerContacts){
+-        customerContactsService.updateCustomerContacts(customerContacts.getContact_id(), customerContacts);
+-        return "redirect:/";
+-    }*/
+-}
+Index: src/main/java/com/demo/nmr/Repository/CustomerContactsRepo.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/com/demo/nmr/Repository/CustomerContactsRepo.java	(date 1590860463441)
++++ src/main/java/com/demo/nmr/Repository/CustomerContactsRepo.java	(date 1590860463441)
+@@ -13,7 +13,7 @@
+     JdbcTemplate template;
+ 
+     public List<CustomerContacts> fetchAll(){
+-        String sql = "SELECT * FROM `nordic-motorhome`.`customer_contacts`;";
++        String sql = "SELECT * FROM customer_contacts;";
+         RowMapper<CustomerContacts> rowMapper = new BeanPropertyRowMapper<>(CustomerContacts.class);
+         return template.query(sql, rowMapper);
+     }
+@@ -23,14 +23,12 @@
+         template.update(sql, c.getContact_id(), c.getE_mail(), c.getPhone());
+         return null;
+     }
+-
+     public CustomerContacts findCustomerContactById(int contact_id){
+         String sql = "SELECT * FROM `nordic-motorhome`.`customer_contacts` WHERE `contact_id` = ?;";
+         RowMapper<CustomerContacts> rowMapper = new BeanPropertyRowMapper<>(CustomerContacts.class);
+         CustomerContacts c = template.queryForObject(sql, rowMapper, contact_id);
+         return c;
+     }
+-
+     public Boolean deleteCustomerContacts (int id){
+         String sql = "DELETE FROM `nordic-motorhome`.`customer_contacts` WHERE `contact_id` = ?;";
+         return template.update(sql, id) < 0;
