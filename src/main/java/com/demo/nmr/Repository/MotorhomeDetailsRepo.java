@@ -22,18 +22,26 @@ public class MotorhomeDetailsRepo {
     }
 
     public MotorhomeDetails addMotorhomeDetails(MotorhomeDetails m){
+        String sql = "INSERT INTO motorhome_details (motorhome_detail_id, km, passengers, price_per_day, extra) VALUES (?, ?, ?, ?, ?)";
+        template.update(sql, m.getMotorhome_detail_id(), m.getKm(), m.getPassengers(), m.getPrice_per_day(), m.getExtra());
         return null;
     }
 
     public MotorhomeDetails findMotorhomeDetailsById(int motorhome_detail_id){
-        return null;
+        String sql = "SELECT * FROM motorhome_details WHERE motorhome_detail_id = ?";
+        RowMapper<MotorhomeDetails> rowMapper = new BeanPropertyRowMapper<>(MotorhomeDetails.class);
+        MotorhomeDetails m = template.queryForObject(sql, rowMapper, motorhome_detail_id);
+        return m;
     }
 
-    public static Boolean deleteMotorhomeDetailsById(int motorhome_detail_id){
-        return null;
+    public Boolean deleteMotorhomeDetailsById(int motorhome_detail_id){
+        String sql = "DELETE FROM motorhome_details WHERE motorhome_detail_id = ?";
+        return template.update(sql, motorhome_detail_id) < 0;
     }
 
-    public static Motorhome updateMotorhomeDetailsById(int motorhome_detail_id, MotorhomeDetails m){
+    public MotorhomeDetails updateMotorhomeDetailsById(int motorhome_detail_id, MotorhomeDetails m){
+        String sql = "UPDATE motorhome_details SET motorhome_detail_id = ?, km = ?, passengers = ?, price_per_day = ?, extra = ? WHERE motorhome_detail_id = ?";
+        template.update(sql, m.getMotorhome_detail_id(), m.getKm(), m.getPassengers(), m.getPrice_per_day(), m.getExtra(), m.getMotorhome_detail_id());
         return null;
     }
 }

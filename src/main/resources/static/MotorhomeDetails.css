@@ -1,0 +1,46 @@
+table{
+    border-collapse: collapse;
+    width: 40%;
+}
+th{
+    background-color: lightblue;
+}
+td, th{
+    border: 1px solid black;
+    text-align: left;
+    padding: 4px;
+}
+tr:nth-child(even){
+    background-color: lightgray;
+}
+
+body{
+    background-color: lime;
+}
+
+.btn{
+  border: none;
+  color: lightpink;
+  padding: 7px 10px;
+  text-align: center;
+}
+
+.btn:hover{
+    box-shadow: 2px 2px 2px lightblue;
+}
+
+#btn-createMotorhomeDetails{
+    background-color: plum;
+}
+
+#btn-viewOneMotorhomeDetail{
+    background-color: antiquewhite;
+}
+
+#btn-deleteMotorhomeDetails{
+    background-color: cadetblue;
+}
+
+#btn-updateMotorhomeDetails{
+    background-color: rosybrown;
+}
