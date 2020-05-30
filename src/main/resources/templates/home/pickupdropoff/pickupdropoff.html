@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="pickUpDropOffCSS.css">
+</head>
+<body>
+    <h1>Pick-off and drop-off List:</h1>
+    <a href="/createDP">
+        <button class="btn-createDP" id="btn-createDP">
+            Create new Pick off and drop off locations
+        </button>
+    </a>
+    <table>
+        <thead>
+        <tr>
+            <th>Pick-off and drop-off Id</th>
+            <th>Pick-up location</th>
+            <th>Pick-up distance</th>
+            <th>Drop-off location</th>
+            <th>Drop-off distance</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="pickupdropoff: ${pickupdropoff}">
+            <td th:text="${pickupdropoff.pd_id}">
+            <td th:text="${pickupdropoff.pick_up_location}">
+            <td th:text="${pickupdropoff.pick_up_distance}">
+            <td th:text="${pickupdropoff.drop_off_location}">
+            <td th:text="${pickupdropoff.drop_off_distance}">
+            <td>
+                <a th:href="@{'/viewPD/'+${pickupdropoff.pd_id}}">
+                    <button class="btn-viewPD", id="btn-viewPD">
+                        View this
+                    </button>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
