@@ -1,6 +1,6 @@
 package com.demo.nmr.Repository;
 
-import com.demo.nmr.Model.Customer;
+import com.demo.nmr.Model.PickUpDropOff;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -10,29 +10,29 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class CustomerRepo {
+public class PickUpDropOffRepo {
     @Autowired
     JdbcTemplate template;
 
-    public List<Customer> fetchAll(){
-        String sql = "SELECT * FROM customers;";
-        RowMapper<Customer> rowMapper = new BeanPropertyRowMapper<>(Customer.class);
+    public List<PickUpDropOff> fetchAll(){
+        String sql = "SELECT * FROM `pick-up_and_drop-off`;";
+        RowMapper<PickUpDropOff> rowMapper = new BeanPropertyRowMapper<>(PickUpDropOff.class);
         return template.query(sql, rowMapper);
     }
 
-    public Customer addCustomer(Customer c){
+    public PickUpDropOff addPickUpDropOff(PickUpDropOffRepo p){
         return null;
     }
 
-    public Customer findCustomerById(int customer_id){
+    public PickUpDropOff findPickUpDropOffById(int pd_id){
         return null;
     }
 
-    public static Boolean deleteCustomer(int customer_id){
+    public static Boolean deletePickUpDropOff(int pd_id){
         return null;
     }
 
-    public static Customer updateCustomer(int customer_id, Customer c){
+    public static PickUpDropOff updatePickUpDropOff(int pd_id, PickUpDropOffRepo p){
         return null;
     }
 }
