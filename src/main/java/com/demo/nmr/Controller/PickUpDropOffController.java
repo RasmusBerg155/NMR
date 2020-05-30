@@ -41,4 +41,14 @@ public class PickUpDropOffController {
         model.addAttribute("pickupdropoff", pickUpDropOffService.findPickUpDropOffById(pd_id));
         return "home/pickupdropoff/viewPD";
     }
+
+    @GetMapping("/deletePD/{pd_id}")
+    public String delete(@PathVariable("pd_id") int pd_id){
+        boolean deleted = pickUpDropOffService.deletePickUpDropOff(pd_id);
+        if (deleted) {
+            return "redirect:/";
+        } else {
+            return "redirect:/";
+        }
+    }
 }
