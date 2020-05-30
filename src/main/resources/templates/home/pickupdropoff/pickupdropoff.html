@@ -29,6 +29,13 @@
             <td th:text="${pickupdropoff.pick_up_distance}">
             <td th:text="${pickupdropoff.drop_off_location}">
             <td th:text="${pickupdropoff.drop_off_distance}">
+            <td>
+                <a th:href="@{'/viewPD/'+${pickupdropoff.pd_id}}">
+                    <button class="btn-viewPD", id="btn-viewPD">
+                        View this
+                    </button>
+                </a>
+            </td>
         </tr>
         </tbody>
     </table>

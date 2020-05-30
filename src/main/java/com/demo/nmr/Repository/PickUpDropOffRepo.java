@@ -29,7 +29,7 @@ public class PickUpDropOffRepo {
     }
 
     public PickUpDropOff findPickUpDropOffById(int pd_id){
-        String sql = "SELECT * FROM `pick-up_and_drop-off` WHERE id = ?";
+        String sql = "SELECT * FROM `pick-up_and_drop-off` WHERE pd_id = ?";
         RowMapper<PickUpDropOff> rowMapper = new BeanPropertyRowMapper<>(PickUpDropOff.class);
         PickUpDropOff p = template.queryForObject(sql, rowMapper, pd_id);
         return p;

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
@@ -33,5 +34,11 @@ public class PickUpDropOffController {
     public String createDP(@ModelAttribute PickUpDropOff pickUpDropOff){
         pickUpDropOffService.addPickUpDropOff(pickUpDropOff);
         return "redirect:/";
+    }
+
+    @GetMapping("/viewPD/{pd_id}")
+    public String viewPD(@PathVariable("pd_id") int pd_id, Model model){
+        model.addAttribute("pickupdropoff", pickUpDropOffService.findPickUpDropOffById(pd_id));
+        return "home/pickupdropoff/viewPD";
     }
 }
