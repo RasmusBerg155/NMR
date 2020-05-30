@@ -29,7 +29,7 @@ public class MotorhomeDetailsService {
         return motorhomeDetailsRepo.deleteMotorhomeDetailsById(motorhome_detail_id);
     }
 
-    public Motorhome updateMotorhomeDetailsById(int motorhome_detail_id, MotorhomeDetails m){
+    public MotorhomeDetails updateMotorhomeDetailsById(int motorhome_detail_id, MotorhomeDetails m){
         return motorhomeDetailsRepo.updateMotorhomeDetailsById(motorhome_detail_id, m);
     }
 }

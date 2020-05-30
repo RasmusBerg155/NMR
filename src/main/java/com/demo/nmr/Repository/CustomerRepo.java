@@ -20,7 +20,7 @@ public class CustomerRepo {
         return template.query(sql, rowMapper);
     }
 
-    public Customer addCustomer(Customer m){
+    public Customer addCustomer(Customer c){
         return null;
     }
 
@@ -32,7 +32,7 @@ public class CustomerRepo {
         return null;
     }
 
-    public static Customer updateCustomer(int customer_id, Customer m){
+    public static Customer updateCustomer(int customer_id, Customer c){
         return null;
     }
 }

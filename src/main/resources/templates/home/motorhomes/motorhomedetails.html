@@ -7,6 +7,11 @@
 </head>
 <body>
 <h1>Motorhome Details</h1>
+<a href="/CreateMotorhomeDetails">
+    <button class="btn-createMotorhomeDetails" id="btn-createMotorhomeDetails">
+        Create new Motorhome Details
+    </button>
+</a>
 
 <table>
     <thead>
@@ -20,11 +25,30 @@
     </thead>
     <tbody>
     <tr th:each="motorhomedetails: ${motorhomedetails}">
-        <td th:text="${motorhomedetails.Motorhome_detail_id}"></td>
-        <td th:text="${motorhomedetails.Km}"></td>
-        <td th:text="${motorhomedetails.Passengers}"></td>
-        <td th:text="${motorhomedetails.Price_per_day}"></td>
-        <td th:text="${motorhomedetails.Extra}"></td>
+        <td th:text="${motorhomedetails.motorhome_detail_id}"></td>
+        <td th:text="${motorhomedetails.km}"></td>
+        <td th:text="${motorhomedetails.passengers}"></td>
+        <td th:text="${motorhomedetails.price_per_day}"></td>
+        <td th:text="${motorhomedetails.extra}"></td>
+        <td>
+            <a th:href="@{'/ViewOneMotorhomeDetail/'+${motorhomedetails.motorhome_detail_id}}">
+            <button class="btn-viewOneMotorhomeDetail", id="btn-viewOneMotorhomeDetail">
+                View One Motorhome Detail
+            </button>
+        </a>
+
+            <a th:href="@{'/DeleteMotorhomeDetails/'+${motorhomedetails.motorhome_detail_id}}">
+                <button class="btn-deleteMotorhomeDetails", id="btn-deleteMotorhomeDetails">
+                    Delete Motorhome Details
+                </button>
+            </a>
+
+            <a th:href="@{'/UpdateMotorhomeDetails/'+${motorhomedetails.motorhome_detail_id}}">
+                <button class="btn-updateMotorhomeDetails", id="btn-updateMotorhomeDetails">
+                    Update Motorhome Details
+                </button>
+            </a>
+        </td>
     </tr>
     </tbody>
 </table>
