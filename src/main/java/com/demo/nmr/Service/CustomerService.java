@@ -1,5 +1,3 @@
-/* THIS FUNCTION IS UNDER REVIEW AND IS TEMPORARILY ELIMINATED
-
 package com.demo.nmr.Service;
 
 
@@ -35,4 +33,3 @@ public class CustomerService {
         return customerRepo.updateCustomer(customer_id, c);
     }
 }
-*/

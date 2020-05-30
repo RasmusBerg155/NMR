@@ -14,7 +14,7 @@ public class CustomerContactsService {
     public List<CustomerContacts> fetchAll(){
         return customerContactsRepo.fetchAll();
     }
-    public CustomerContacts addcustomerContacts(CustomerContacts c){
+    public CustomerContacts addCustomerContacts(CustomerContacts c){
         return customerContactsRepo.addCustomerContacts(c);
     }
     public CustomerContacts findCustomerContactById(int contact_id){

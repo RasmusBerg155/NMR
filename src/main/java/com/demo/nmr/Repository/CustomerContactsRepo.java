@@ -1,4 +1,5 @@
 package com.demo.nmr.Repository;
+
 import com.demo.nmr.Model.CustomerContacts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -29,10 +30,12 @@ public class CustomerContactsRepo {
         CustomerContacts c = template.queryForObject(sql, rowMapper, contact_id);
         return c;
     }
-    public Boolean deleteCustomerContacts (int id){
+
+    public boolean deleteCustomerContacts (int id){
         String sql = "DELETE FROM `nordic-motorhome`.`customer_contacts` WHERE `contact_id` = ?;";
         return template.update(sql, id) < 0;
     }
+
     public CustomerContacts updateCustomerContacts(int id, CustomerContacts c){
         String sql = "UPDATE `nordic-motorhome`.`customer_contacts` SET `e_mail` = ?, `phone` = ? WHERE `contact_id` = ?;";
         template.update(sql, c.getE_mail(), c.getPhone(), c.getContact_id());
