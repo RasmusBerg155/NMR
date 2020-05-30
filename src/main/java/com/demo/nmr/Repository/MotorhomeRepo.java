@@ -27,8 +27,12 @@ public class MotorhomeRepo {
     }
 
     public Motorhome findMotorhomeById(int motorhome_id){
-        return null;
+        String sql = "SELECT * FROM motorhomes WHERE motorhome_id = ?";
+        RowMapper<Motorhome> rowMapper = new BeanPropertyRowMapper<>(Motorhome.class);
+        Motorhome m = template.queryForObject(sql, rowMapper, motorhome_id);
+        return m;
     }
+
 
     public static Boolean deleteMotorhome(int motorhome_id){
         return null;

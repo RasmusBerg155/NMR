@@ -17,3 +17,6 @@ tr:nth-child(even){
 body{
     background-color: whitesmoke;
 }
+#btn-view {
+    background-color: darkgoldenrod;
+}

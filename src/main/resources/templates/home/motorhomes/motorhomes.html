@@ -7,8 +7,8 @@
 </head>
 <body>
     <h1>Motorhome List</h1>
-    <a href="/create">
-        <button class ="btn-create" id="btn-create">Create new Motorhome</button>
+    <a href="/createMH">
+        <button class ="btn-createMH" id="btn-createMH">Create new Motorhome</button>
     </a>
 
     <table>
@@ -21,11 +21,17 @@
     </tr>
         </thead>
     <tbody>
-    <tr th:each="motorhomes: ${motorhomes}">
-        <td th:text="${motorhomes.Motorhome_id}">
-        <td th:text="${motorhomes.Brand}">
-        <td th:text="${motorhomes.Model}">
-        <td th:text="${motorhomes.Motorhome_detail_id}">
+    <tr th:each="motorhome: ${motorhomes}">
+        <td th:text="${motorhome.motorhome_id}">
+        <td th:text="${motorhome.brand}">
+        <td th:text="${motorhome.model}">
+        <td th:text="${motorhome.motorhome_detail_id}">
+        <td>
+            <a th:href="@{'/viewMH/'+${motorhome_id}}">
+                <button class ="btn-viewMH", id="btn-viewMH">View</button>
+
+            </a>
+        </td>
     </tr>
     </tbody>
 </table>
