@@ -17,7 +17,7 @@ public class PickUpDropOffService {
         return pickUpDropOffRepo.fetchAll();
     }
 
-    public PickUpDropOff addPickUpDropOff(PickUpDropOffRepo p){
+    public PickUpDropOff addPickUpDropOff(PickUpDropOff p){
         return pickUpDropOffRepo.addPickUpDropOff(p);
     }
 

@@ -5,6 +5,7 @@ import javax.persistence.Id;
 
 @Entity
 public class PickUpDropOff {
+
     @Id
     private int pd_id;
     private String pick_up_location;
