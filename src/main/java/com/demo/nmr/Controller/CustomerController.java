@@ -21,3 +21,5 @@ public class CustomerController {
         return "home/customer/customer";
     }
 }
+
+//trump is gay
