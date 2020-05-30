@@ -1,4 +1,7 @@
+/* THIS FUNCTION IS UNDER REVIEW AND IS TEMPORARILY ELIMINATED
+
 package com.demo.nmr.Repository;
+
 
 import com.demo.nmr.Model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,4 +38,4 @@ public class CustomerRepo {
     public static Customer updateCustomer(int customer_id, Customer c){
         return null;
     }
-}
+} */
