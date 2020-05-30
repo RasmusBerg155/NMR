@@ -1,15 +1,15 @@
 package com.demo.nmr.Model;
-/* import javax.persistence.Entity;
+import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class customerContacts {
+public class CustomerContacts {
     @Id
     private int contact_id;
     private String e_mail;
     private String phone;
 
-    public customerContacts() {
+    public CustomerContacts() {
     }
 
     public int getContact_id() {
@@ -35,4 +35,4 @@ public class customerContacts {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-} */
+}

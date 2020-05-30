@@ -1,6 +1,5 @@
 package com.demo.nmr.Repository;
 
-import com.demo.nmr.Model.Motorhome;
 import com.demo.nmr.Model.MotorhomeDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;

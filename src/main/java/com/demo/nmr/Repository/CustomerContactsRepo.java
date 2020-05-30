@@ -1,5 +1,5 @@
 package com.demo.nmr.Repository;
-/* import com.demo.nmr.Model.customerContacts;
+import com.demo.nmr.Model.CustomerContacts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -8,34 +8,35 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class customerContactsRepo {
+public class CustomerContactsRepo {
     @Autowired
     JdbcTemplate template;
 
-    public List<customerContacts> fetchAll(){
-        String sql = "SELECT * FROM `nordic-motorhome`.`customer_contacts`;";
-        RowMapper<customerContacts> rowMapper = new BeanPropertyRowMapper<>(customerContacts.class);
+    public List<CustomerContacts> fetchAll(){
+        String sql = "SELECT * FROM customer_contacts;";
+        RowMapper<CustomerContacts> rowMapper = new BeanPropertyRowMapper<>(CustomerContacts.class);
         return template.query(sql, rowMapper);
     }
-    public customerContacts addcustomerContacts(customerContacts C){
+
+    public CustomerContacts addCustomerContacts(CustomerContacts c){
         String sql = "INSERT INTO `nordic-motorhome`.`customer_contacts` (contact_id, e_mail, phone) VALUES (?, ?, ?);";
-        template.update(sql, C.getContact_id(), C.getE_mail(), C.getPhone());
+        template.update(sql, c.getContact_id(), c.getE_mail(), c.getPhone());
         return null;
     }
-    public customerContacts findCustomerContactById(int contact_id){
+    public CustomerContacts findCustomerContactById(int contact_id){
         String sql = "SELECT * FROM `nordic-motorhome`.`customer_contacts` WHERE `contact_id` = ?;";
-        RowMapper<customerContacts> rowMapper = new BeanPropertyRowMapper<>(customerContacts.class);
-        customerContacts C = template.queryForObject(sql, rowMapper, contact_id);
-        return C;
+        RowMapper<CustomerContacts> rowMapper = new BeanPropertyRowMapper<>(CustomerContacts.class);
+        CustomerContacts c = template.queryForObject(sql, rowMapper, contact_id);
+        return c;
     }
     public Boolean deleteCustomerContacts (int id){
         String sql = "DELETE FROM `nordic-motorhome`.`customer_contacts` WHERE `contact_id` = ?;";
         return template.update(sql, id) < 0;
     }
-    public customerContacts updateCustomerContacts(int id, customerContacts C){
+    public CustomerContacts updateCustomerContacts(int id, CustomerContacts c){
         String sql = "UPDATE `nordic-motorhome`.`customer_contacts` SET `e_mail` = ?, `phone` = ? WHERE `contact_id` = ?;";
-        template.update(sql, C.getE_mail(), C.getPhone(), C.getContact_id());
+        template.update(sql, c.getE_mail(), c.getPhone(), c.getContact_id());
         return  null;
     }
 
-}   */
+}

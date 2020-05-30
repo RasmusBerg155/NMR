@@ -1,7 +1,4 @@
-/* THIS FUNCTION IS UNDER REVIEW AND IS TEMPORARILY ELIMINATED
-
 package com.demo.nmr.Model;
-
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -57,4 +54,4 @@ public class Customer {
     public void setAddress_id(int address_id) {
         this.address_id = address_id;
     }
-} */
+}

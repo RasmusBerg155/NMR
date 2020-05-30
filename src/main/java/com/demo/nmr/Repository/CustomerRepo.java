@@ -1,5 +1,3 @@
-/* THIS FUNCTION IS UNDER REVIEW AND IS TEMPORARILY ELIMINATED
-
 package com.demo.nmr.Repository;
 
 
@@ -38,4 +36,4 @@ public class CustomerRepo {
     public static Customer updateCustomer(int customer_id, Customer c){
         return null;
     }
-} */
+}
