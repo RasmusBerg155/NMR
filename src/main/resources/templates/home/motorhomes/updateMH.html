@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Edit motorhome</h1>
+
+    <form action="/updateMH" method="post">
+        <input type="text" name="motorhome_id" th:value="${motorhome.motorhome_id}">
+        <input type="text" name="brand" th:value="${motorhome.brand}">
+        <input type="text" name="model" th:value="${motorhome.model}">
+        <input type="text" name="motorhome_id_detail" th:value="${motorhome.motorhome_id_detail}">
+        <input type="submit" value="Save changes">
+
+    </form>
+</body>
+</html>

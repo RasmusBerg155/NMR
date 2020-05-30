@@ -17,6 +17,12 @@ tr:nth-child(even){
 body{
     background-color: whitesmoke;
 }
-#btn-view {
+#btn-viewMH {
+    background-color: darkgoldenrod;
+}
+#btn-deleteMH {
+    background-color: darkgoldenrod;
+}
+#btn-updateMH {
     background-color: darkgoldenrod;
 }

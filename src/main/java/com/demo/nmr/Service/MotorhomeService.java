@@ -25,10 +25,10 @@ public class MotorhomeService {
     }
 
     public Boolean deleteMotorhome(int motorhome_id){
-        return MotorhomeRepo.deleteMotorhome(motorhome_id);
+        return motorhomeRepo.deleteMotorhome(motorhome_id);
     }
 
     public Motorhome updateMotorhome(int motorhome_id, Motorhome m){
-        return MotorhomeRepo.updateMotorhome(motorhome_id, m);
+        return motorhomeRepo.updateMotorhome(motorhome_id, m);
     }
 }

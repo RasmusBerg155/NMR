@@ -38,4 +38,23 @@ public class MotorhomeController {
         model.addAttribute("motorhomes", motorhomeService.findMotorhomeById(motorhome_id));
         return "home/motorhomes/viewMH";
     }
+    @GetMapping("/deleteMH/{motorhome_id}")
+    public String deleteMH(@PathVariable("motorhome_id")int motorhome_id) {
+        boolean deleted = motorhomeService.deleteMotorhome(motorhome_id);
+        if(deleted) {
+            return "redirect:/";
+        } else {
+            return "redirect:/";
+        }
+    }
+    @GetMapping("/updateMH/{motorhome_id}")
+    public String updateMH(@PathVariable("motorhome_id")int motorhome_id, Model model){
+        model.addAttribute("motorhomes", motorhomeService.findMotorhomeById(motorhome_id));
+        return "home/motorhomes/updateMH";
+    }
+    @PostMapping("/updateMH")
+    public String updateMH(@ModelAttribute Motorhome motorhome){
+        motorhomeService.updateMotorhome(motorhome.getMotorhome_id(), motorhome);
+        return "redirect:/";
+    }
 }

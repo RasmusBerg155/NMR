@@ -34,11 +34,14 @@ public class MotorhomeRepo {
     }
 
 
-    public static Boolean deleteMotorhome(int motorhome_id){
-        return null;
+    public Boolean deleteMotorhome(int motorhome_id){
+        String sql ="DELETE * FROM motorhomes WHERE motorhome_id = ?";
+        return template.update(sql,motorhome_id) < 0;
     }
 
-    public static Motorhome updateMotorhome(int motorhome_id, Motorhome m){
+    public  Motorhome updateMotorhome(int motorhome_id, Motorhome m){
+        String sql ="UPDATE motorhome SET brand = ?, model = ? WHERE motorhome_id = ?";
+        template.update(sql,m.getBrand(), m.getModel());
         return null;
     }
 }

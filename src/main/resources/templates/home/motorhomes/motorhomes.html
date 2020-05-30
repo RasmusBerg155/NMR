@@ -29,7 +29,12 @@
         <td>
             <a th:href="@{'/viewMH/'+${motorhome_id}}">
                 <button class ="btn-viewMH", id="btn-viewMH">View</button>
-
+            </a>
+             <a th:href="@{'/deleteMH/'+${motorhome_id}}">
+                <button class ="btn-deleteMH", id="btn-deleteMH">Delete</button>
+             </a>
+            <a th:href="@{'/updateMH/'+${motorhome_id}}">
+                <button class ="btn-updateMH", id="btn-updateMH">Edit person</button>
             </a>
         </td>
     </tr>
