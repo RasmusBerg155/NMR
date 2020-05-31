@@ -14,10 +14,10 @@ public class TermsAndCondController {
     @Autowired
     TermsAndCondService termsAndCondService;
 
-    @GetMapping("/ShowTermsAndCond")
+  /*  @GetMapping("/ShowTermsAndCond")
     public String showTermsAndCond(Model model){
         List<TermsAndCond> termsAndCondList = termsAndCondService.fetchAll();
-        model.addAttribute("termsandcond", termsAndCondList);
-        return "home/pickupdropoff/pickupdropoff";
-    }
+        model.addAttribute("termsandconditions", termsAndCondList);
+        return "home/termsandconditions/termsandcond";
+    }*/
 }

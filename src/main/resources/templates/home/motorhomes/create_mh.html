@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.themeleaf.com">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -18,6 +18,12 @@
         <input type="text" name="model"></div>
         <div><label>Enter Motorhome Detail_ID:</label>
         <input type="text" name="motorhome_detail_id"></div>
+        <select name="motorhomedetails" id="motorhomedetails">
+            <option value="md" th:each="md:${motorhomedetails}" th:text="${md.motorhome_detail_id +
+            '-MD_ID ,' + md.km + ' km ' + ' , ' + md.passengers + ' Passengers ' + ' , ' + md.price_per_day + ' Price/day ' +
+            ' , ' + ' Extras: ' + md.extra}"
+            ></option>
+        </select>
         <div><input style="background-color: lightsalmon" type="submit" value="Create new motorhome"></div>
     </form>
 </body>
