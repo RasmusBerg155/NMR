@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="pickupdropoff.css">
+</head>
+<body>
+    <h1>Terms and Conditions:</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Terms and Conditions Id</th>
+            <th>Season (High/Mid/Low)</th>
+            <th>Total rent days</th>
+            <th>Kilometers</th>
+            <th>Fuel tank in %</th>
+            <th>Cancellation</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="termsandconditions: ${termsandconditions}"></tr>
+            <td th:text="${termsandconditions.tc_id}"></td>
+            <td th:text="${termsandconditions.season}"></td>
+            <td th:text="${termsandconditions.rent_days}"></td>
+            <td th:text="${termsandconditions.km}"></td>
+            <td th:text="${termsandconditions.fuel_tank}"></td>
+            <td th:text="${termsandconditions.cancellation}"></td>
+        </tbody>
+    </table>
+</body>
+</html>

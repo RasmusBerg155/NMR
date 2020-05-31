@@ -25,7 +25,7 @@ public class PickUpDropOffService {
         return pickUpDropOffRepo.findPickUpDropOffById(pd_id);
     }
 
-    public Boolean deletePickUpDropOff(int pd_id){
+    public boolean deletePickUpDropOff(int pd_id){
         return pickUpDropOffRepo.deletePickUpDropOff(pd_id);
     }
 

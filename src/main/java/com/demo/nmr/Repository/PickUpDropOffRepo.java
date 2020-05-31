@@ -35,7 +35,7 @@ public class PickUpDropOffRepo {
         return p;
     }
 
-    public Boolean deletePickUpDropOff(int pd_id){
+    public boolean deletePickUpDropOff(int pd_id){
         String sql ="DELETE FROM `pick_up_and_drop_off` WHERE pd_id = ?";
         return template.update(sql, pd_id) < 0;
     }
