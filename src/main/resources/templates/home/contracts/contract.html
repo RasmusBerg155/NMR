@@ -29,7 +29,7 @@
         <td th:text="${contracts.tc_id}"></td>
         <td th:text="${contracts.motorhome_id}"></td>
         <td th:text="${contracts.customer_id}"></td>
-    </tr>
+
     <td>
         <a th:href="@{'/viewContract/'+${contracts.contract_id}}">
             <button class ="btn-viewContract", id="btn-viewContract">View</button>
@@ -41,6 +41,7 @@
             <button class ="btn-updateContract", id="btn-updateContract">Edit</button>
         </a>
     </td>
+    </tr>
     </tbody>
 </table>
 </body>
