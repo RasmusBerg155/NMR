@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="motorhome.css">
+    <link rel="stylesheet" type="text/css" href="tableDesign.css">
+    <link rel="stylesheet" href="menustyles.css">
 </head>
 <body>
 <h1>Motorhome Details</h1>
@@ -16,11 +17,12 @@
 <table>
     <thead>
     <tr>
-        <th>Motorhome_Detail_ID</th>
+        <th>Detail_ID</th>
         <th>KM</th>
         <th>Passengers</th>
-        <th>Price_Per_Day</th>
+        <th>Price/Day</th>
         <th>Extra</th>
+        <th>Make Changes</th>
     </tr>
     </thead>
     <tbody>
@@ -33,19 +35,19 @@
         <td>
             <a th:href="@{'/ViewOneMotorhomeDetail/'+${motorhomedetails.motorhome_detail_id}}">
             <button class="btn-viewOneMotorhomeDetail", id="btn-viewOneMotorhomeDetail">
-                View One Motorhome Detail
+                View
             </button>
         </a>
 
             <a th:href="@{'/DeleteMotorhomeDetails/'+${motorhomedetails.motorhome_detail_id}}">
                 <button class="btn-deleteMotorhomeDetails", id="btn-deleteMotorhomeDetails">
-                    Delete Motorhome Details
+                    Delete
                 </button>
             </a>
 
             <a th:href="@{'/UpdateMotorhomeDetails/'+${motorhomedetails.motorhome_detail_id}}">
                 <button class="btn-updateMotorhomeDetails", id="btn-updateMotorhomeDetails">
-                    Update Motorhome Details
+                    Update
                 </button>
             </a>
         </td>
