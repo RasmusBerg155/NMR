@@ -1,6 +1,5 @@
 * {
     font-family: Bahnschrift;
-    background-color: beige;
 
 }
 h1{
@@ -8,6 +7,9 @@ h1{
     text-align: center;
 }
 body{
+    background-image: url("LakeRV.jpg");
+    background-position: top;
+    background-size: 100%;
 }
 nav{
     position: center;

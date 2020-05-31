@@ -3,7 +3,7 @@ table{
     width: 40%;
 }
 th{
-    background-color: transparent;
+    /*background-color: transparent;*/
 }
 td, th{
     border: 1px solid black;
@@ -11,36 +11,36 @@ td, th{
     padding: 4px;
 }
 tr:nth-child(even){
-    background-color: transparent;
+    /*background-color: transparent;*/
 }
 
 body{
-    background-color: transparent;
+    /*background-color: transparent;*/
 }
 
 .btn{
   border: none;
-  color: transparent;
+  /*color: transparent;*/
   padding: 7px 10px;
   text-align: center;
 }
 
 .btn:hover{
-    box-shadow: 2px 2px 2px transparent;
+    /*box-shadow: 2px 2px 2px transparent;*/
 }
 
 #btn-createMotorhomeDetails{
-    background-color: transparent;
+    /*background-color: transparent;*/
 }
 
 #btn-viewOneMotorhomeDetail{
-    background-color: transparent;
+    /*background-color: transparent;*/
 }
 
 #btn-deleteMotorhomeDetails{
-    background-color: transparent;
+    /*background-color: transparent;*/
 }
 
 #btn-updateMotorhomeDetails{
-    background-color: transparent;
+    /*background-color: transparent;*/
 }
