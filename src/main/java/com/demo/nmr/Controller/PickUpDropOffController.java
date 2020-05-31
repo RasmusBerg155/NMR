@@ -1,6 +1,6 @@
 package com.demo.nmr.Controller;
 
-import com.demo.nmr.Model.MotorhomeDetails;
+
 import com.demo.nmr.Model.PickUpDropOff;
 import com.demo.nmr.Service.PickUpDropOffService;
 import org.springframework.beans.factory.annotation.Autowired;

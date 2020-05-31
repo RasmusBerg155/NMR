@@ -31,6 +31,7 @@ public class TermsAndCondRepo {
     public Boolean deleteTermsAndCond(int tc_id){
         return null;
     }
+
     public TermsAndCond updateTermsAndCond(int tc_id, TermsAndCond t){
         return null;
     }
