@@ -20,7 +20,7 @@ public class CustomerController {
     @GetMapping("/ShowCustomer")
     public String showCustomer(Model model){
         List<Customer> customersList = customerService.fetchAll();
-        model.addAttribute("customer", customerService);
+        model.addAttribute("customers", customerService);
         return "home/customers/customer";
     }
     @GetMapping("/createCustomer")
@@ -35,7 +35,7 @@ public class CustomerController {
     }
     @GetMapping("/viewCustomer/{customer_id}")
     public String viewCustomer(@PathVariable("customer_id")int customer_id, Model model){
-        model.addAttribute("customer", customerService.findCustomerById(customer_id));
+        model.addAttribute("customers", customerService.findCustomerById(customer_id));
         return "home/customers/view_customer";
     }
 
@@ -50,7 +50,7 @@ public class CustomerController {
     }
     @GetMapping("/updateCustomer/{customer_id}")
     public String updateMH(@PathVariable("customer_id")int customer_id, Model model){
-        model.addAttribute("customer", customerService.findCustomerById(customer_id));
+        model.addAttribute("customers", customerService.findCustomerById(customer_id));
         return "home/customers/update_customer";
     }
     @PostMapping("/updateCustomer")
