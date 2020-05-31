@@ -19,9 +19,9 @@ public class CustomerController {
 
     @GetMapping("/ShowCustomer")
     public String showCustomer(Model model){
-        List<Customer> customerList = customerService.fetchAll();
+        List<Customer> customersList = customerService.fetchAll();
         model.addAttribute("customer", customerService);
-        return "home/customers";
+        return "home/customers/customer";
     }
     @GetMapping("/createCustomer")
     public String createCustomer(){
@@ -33,7 +33,6 @@ public class CustomerController {
         customerService.addCustomer(customer);
         return "redirect:/";
     }
-
     @GetMapping("/viewCustomer/{customer_id}")
     public String viewCustomer(@PathVariable("customer_id")int customer_id, Model model){
         model.addAttribute("customer", customerService.findCustomerById(customer_id));
