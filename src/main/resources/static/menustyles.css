@@ -4,65 +4,109 @@
 }
 h1{
     position: center;
+    alignment: center;
     text-align: center;
     text-decoration: none;
+    background-color: lightsteelblue;
+    opacity: 75%;
+    margin-left: 25%;
+    margin-right: 25%;
 }
-a:link{text-decoration: none!important;}
+/*a:link{text-decoration: none!important;}*/
 
 body{
     background-image: url("LakeRV.jpg");
     background-position: top;
-    background-repeat: no-repeat;
+    background-repeat: initial;
     background-size: 100%;
     text-decoration: none;
     background-color: black;
 }
-.navigation{
-    position: center;
-    alignement: center;
-    text-allign: center;
-    text-decoration: none;
-    background-color: lightgray;
-    opacity: 75%;
-    margin-right: 36%;
-    margin-left: 36%;
-}
 
-nav{
+.pagePreview{
     position: center;
     alignment: center;
+    text-align: center;
     text-decoration: none;
-    boder-bottom: 10px;
+    background-color: lightsteelblue;
+    opacity: 75%;
+    margin-left: 36%;
+    margin-right: 36%;
+    margin-top: 10%;
+  }
+
+/*THE NAVIGATION MENU IS POSTPONED*/
+/* BELOW HERE IS THE NAVIGATION MENU DESIGN */
+
+/*.navigation{*/
+/*    position: center;*/
+/*    alignement: center;*/
+/*    text-allign: center;*/
+/*    text-decoration: none;*/
+/*    background-color: lightgray;*/
+/*    opacity: 75%;*/
+/*    margin-right: 36%;*/
+/*    margin-left: 36%;*/
+/*}*/
+
+/*nav{*/
+/*    position: center;*/
+/*    alignment: center;*/
+/*    text-decoration: none;*/
+/*    boder-bottom: 10px;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+
+/*nav h1{*/
+/*    color: black;*/
+/*    font-family: Bahnschrift;*/
+/*    background-color: darkgray;*/
+/*    opacity: 80%;*/
+/*    margin-left: 36%;*/
+/*    margin-right: 36%;*/
+
+/*}*/
+/*ul{*/
+/*}*/
+/*ul li{*/
+/*    position: center;*/
+/*    alignment: center;*/
+/*    list-style: none;*/
+/*    display: grid;*/
+/*    line-height: 33px;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*ul li a{*/
+/*    display: block;*/
+/*    text-decoration: none;*/
+/*    text-align: center;*/
+/*    font-size: 30px;*/
+/*    font-family: Bahnschrift;*/
+/*    color: black;*/
+/*    background-color: lightgray;*/
+/*    opacity: 60%;*/
+/*}*/
+
+/* BELOW HERE ARE THE FRONT PAGE BUTTONS' DESIGNS */
+
+#btn-showMotorhomes{
+    background-color: steelblue;
     margin-bottom: 10px;
 }
-
-nav h1{
-    color: black;
-    font-family: Bahnschrift;
-    background-color: darkgray;
-    opacity: 80%;
-    margin-left: 36%;
-    margin-right: 36%;
-
+#btn-showMotorhomeDetails{
+    background-color: steelblue;
+    margin-bottom: 10px;
 }
-ul{
+#btn-showCustomerContracts{
+    background-color: steelblue;
+    margin-bottom: 10px;
 }
-ul li{
-    position: center;
-    alignment: center;
-    list-style: none;
-    display: grid;
-    line-height: 33px;
-    text-decoration: none;
+#btn-showCustomers{
+    background-color: steelblue;
+    margin-bottom: 10px;
 }
-
-ul li a{
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    font-size: 30px;
-    font-family: Bahnschrift;
-    color: black;
-    background-color: lightgray;
-    opacity: 60%;
+#btn-showPickUpDropOff{
+    background-color: steelblue;
+    margin-bottom: 10px;
 }
