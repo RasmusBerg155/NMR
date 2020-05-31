@@ -2,7 +2,6 @@ package com.demo.nmr.Repository;
 
 
 import com.demo.nmr.Model.Customer;
-import com.demo.nmr.Model.Motorhome;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;

@@ -17,8 +17,8 @@ public class CustomerContactsController {
 
     @GetMapping("/ShowCustomerContracts")
     public String showCustomerContracts(Model model){
-        List<CustomerContacts> motorhomeDetailsList = customerContactsService.fetchAll();
-        model.addAttribute("customercontacts", motorhomeDetailsList);
+        List<CustomerContacts> customerContactsList = customerContactsService.fetchAll();
+        model.addAttribute("customercontacts", customerContactsList);
         return "home/customercontacts/customercontacts";
     }
 }

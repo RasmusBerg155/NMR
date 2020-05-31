@@ -29,20 +29,23 @@
             <td th:text="${customers.last_name}"></td>
             <td th:text="${customers.contact_id}"></td>
             <td th:text="${customers.address_id}"></td>
-        </tr>
         <td>
             <a th:href="@{'/viewCustomer/'+${customers.customer_id}}">
-                <button class ="btn-viewCustomer", id="btn-viewCustomer">View</button>
+                <button class ="btn-viewCustomer", id="btn-viewCustomer">
+                    View
+                </button>
             </a>
+
             <a th:href="@{'/deleteCustomer/'+${customers.customer_id}}">
                 <button class ="btn-deleteCustomer", id="btn-deleteCustomer">Delete</button>
             </a>
+
             <a th:href="@{'/updateCustomer/'+${customers.customer_id}}">
                 <button class ="btn-updateCustomer", id="btn-updateCustomer">Edit</button>
             </a>
         </td>
+        </tr>
         </tbody>
 </table>
 </body>
 </html>
-

@@ -17,12 +17,13 @@ public class CustomerController {
     @Autowired
     CustomerService customerService;
 
-    @GetMapping("/ShowCustomer")
-    public String showCustomer(Model model){
-        List<Customer> customersList = customerService.fetchAll();
-        model.addAttribute("customers", customerService);
-        return "home/customers/customer";
+    @GetMapping("/ShowCustomers")
+    public String showCustomers(Model model){
+        List<Customer> customerList = customerService.fetchAll();
+        model.addAttribute("customers", customerList);
+        return "home/customers/customers";
     }
+
     @GetMapping("/createCustomer")
     public String createCustomer(){
         return "home/customers/create_customer";
@@ -33,6 +34,7 @@ public class CustomerController {
         customerService.addCustomer(customer);
         return "redirect:/";
     }
+
     @GetMapping("/viewCustomer/{customer_id}")
     public String viewCustomer(@PathVariable("customer_id")int customer_id, Model model){
         model.addAttribute("customers", customerService.findCustomerById(customer_id));
@@ -48,11 +50,13 @@ public class CustomerController {
             return "redirect:/";
         }
     }
+
     @GetMapping("/updateCustomer/{customer_id}")
     public String updateMH(@PathVariable("customer_id")int customer_id, Model model){
         model.addAttribute("customers", customerService.findCustomerById(customer_id));
         return "home/customers/update_customer";
     }
+
     @PostMapping("/updateCustomer")
     public String updateCustomer(@ModelAttribute Customer customer){
         customerService.updateCustomer(customer.getCustomer_id(), customer);
