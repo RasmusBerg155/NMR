@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="motorhome.css">
+    <link rel="stylesheet" type="text/css" href="tableDesign.css">
+    <link rel="stylesheet" href="menustyles.css">
 </head>
 <body>
     <h1>Motorhome List</h1>
@@ -17,7 +18,8 @@
             <th>Motorhome_ID</th>
             <th>Brand</th>
             <th>Model</th>
-            <th>MotorhomeDetail_ID</th>
+            <th>Detail_ID</th>
+            <th>Make Changes</th>
     </tr>
         </thead>
     <tbody>
@@ -34,7 +36,7 @@
                 <button class ="btn-deleteMH", id="btn-deleteMH">Delete</button>
              </a>
             <a th:href="@{'/updateMH/'+${motorhomes.motorhome_id}}">
-                <button class ="btn-updateMH", id="btn-updateMH">Edit</button>
+                <button class ="btn-updateMH", id="btn-updateMH">Update</button>
             </a>
         </td>
     </tr>

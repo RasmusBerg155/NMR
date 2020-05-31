@@ -1,0 +1,64 @@
+table{
+    border-collapse: collapse;
+    width: max-content;
+}
+th{
+    background-color: steelblue;
+    border: 1px solid black;
+    text-align: center;
+    padding: 2px;
+}
+td{
+    background-color: lightsteelblue;
+    border: 1px solid black;
+    text-align: center;
+    padding: 2px;
+}
+.btn{
+    border: none;
+    color: steelblue;
+    padding: 10px 10px;
+    text-align: center;
+}
+.btn:hover{
+    box-shadow: 5px 5px 5px steelblue;
+}
+#btn-createMH{
+    background-color: steelblue;
+    margin-bottom: 10px;
+}
+#btn-viewMH{
+    background-color: lightsalmon;
+}
+#btn-deleteMH{
+    background-color: lightsalmon;
+}
+#btn-updateMH{
+    background-color: lightsalmon;
+}
+#btn-createMotorhomeDetails{
+    background-color: steelblue;
+    margin-bottom: 10px;
+}
+#btn-viewOneMotorhomeDetail{
+    background-color: lightsalmon;
+}
+#btn-deleteMotorhomeDetails{
+    background-color: lightsalmon;
+}
+#btn-updateMotorhomeDetails{
+    background-color: lightsalmon;
+}
+#btn-createDP{
+    background-color: steelblue;
+    margin-bottom: 10px;
+}
+#btn-viewPD{
+    background-color: lightsalmon;
+}
+#btn-deletePD{
+    background-color: lightsalmon;
+}
+#btn-updatePD{
+    background-color: lightsalmon;
+}
