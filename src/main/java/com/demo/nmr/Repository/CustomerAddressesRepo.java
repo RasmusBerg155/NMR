@@ -21,7 +21,7 @@ public class CustomerAddressesRepo {
         return template.query(sql,rowMapper);
     }
 
-    /*public CustomerAddresses addCustomerAddresses(CustomerAddresses c) {
+    public CustomerAddresses addCustomerAddresses(CustomerAddresses c) {
         String sql = "INSERT INTO customer_addresses (address_id, street_name, street_no, city, country, zip) VALUES (?, ?, ?, ?, ?, ?)";
         template.update(sql, c.getAddress_id(), c.getStreet_name(), c.getStreet_no(), c.getCity(), c.getCountry(), c.getZip());
         return null;
@@ -41,10 +41,9 @@ public class CustomerAddressesRepo {
     }
 
     public CustomerAddresses updateCustomerAddresses(int address_id, CustomerAddresses c) {
-        String sql = "UPDATE customer_addresses SET address_id = ?, street_name = ?, street_no = ?, city = ?, country = ?, zip = ? WHERE address_id = ?";
-        template.update(sql, c.getAddress_id(), c.getStreet_name(), c.getStreet_no(), c.getCity(), c.getCountry(), c.getZip());
+        String sql = "UPDATE `nordic-motorhome`.`customer_addresses` SET street_name = ?, street_no = ?, city = ?, country = ?, zip = ? WHERE address_id = ?;";
+        template.update(sql, c.getStreet_name(), c.getStreet_no(), c.getCity(), c.getCountry(), c.getZip(), c.getAddress_id());
         return null;
-    } */
-
+    }
 
 }

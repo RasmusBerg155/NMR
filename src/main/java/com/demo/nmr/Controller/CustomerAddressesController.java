@@ -25,7 +25,7 @@ public class CustomerAddressesController {
         return "home/customeraddresses/customeraddresses";
     }
 
-    /*@GetMapping("/CreateCustomerAddresses")
+    @GetMapping("/CreateCustomerAddresses")
     public String createCustomerAddresses(){
         return "home/customeraddresses/create_ca";
     }
@@ -62,7 +62,7 @@ public class CustomerAddressesController {
     public String updateCustomerAddresses(@ModelAttribute CustomerAddresses customerAddresses){
         customerAddressesService.updateCustomerAddresses(customerAddresses.getAddress_id(), customerAddresses);
         return "redirect:/";
-    }*/
+    }
 
 }
 

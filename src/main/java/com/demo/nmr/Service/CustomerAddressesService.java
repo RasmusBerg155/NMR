@@ -19,7 +19,8 @@ public class CustomerAddressesService {
         return customerAddressesRepo.fetchAll();
     }
 
-    /*public CustomerAddresses addCustomerAddresses(CustomerAddresses c) {
+
+    public CustomerAddresses addCustomerAddresses(CustomerAddresses c) {
         return customerAddressesRepo.addCustomerAddresses(c);
     }
 
@@ -33,6 +34,6 @@ public class CustomerAddressesService {
 
     public CustomerAddresses updateCustomerAddresses(int address_id, CustomerAddresses c) {
         return customerAddressesRepo.updateCustomerAddresses(address_id, c);
-    }*/
+    }
 
 }
