@@ -50,7 +50,7 @@ body{
     background-color: steelblue;
     margin-bottom: 10px;
 }
-#btn-showCustomerContracts{
+#btn-showCustomerContacts{
     background-color: steelblue;
     margin-bottom: 10px;
 }
@@ -59,6 +59,14 @@ body{
     margin-bottom: 10px;
 }
 #btn-showPickUpDropOff{
+    background-color: steelblue;
+    margin-bottom: 10px;
+}
+#btn-showTermsAndCond {
+    background-color: steelblue;
+    margin-bottom: 10px;
+}
+#btn-showCustomer{
     background-color: steelblue;
     margin-bottom: 10px;
 }

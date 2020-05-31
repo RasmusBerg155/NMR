@@ -77,3 +77,30 @@ td{
 #btn-updateCustomerAddresses{
     background-color: lightsalmon;
 }
+#btn-createCustomer
+{
+    background-color: steelblue;
+    margin-bottom: 10px;
+}
+#btn-viewCustomer{
+    background-color: lightsalmon;
+}
+#btn-deleteCustomer{
+    background-color: lightsalmon;
+}
+#btn-updateCustomer{
+    background-color: lightsalmon;
+}
+#btn-createCustomerContacts{
+    background-color: steelblue;
+    margin-bottom: 10px;
+}
+#btn-view_ct{
+     background-color: lightsalmon;
+ }
+#btn-delete_ct{
+    background-color: lightsalmon;
+}
+#btn-update_ct{
+    background-color: lightsalmon;
+}

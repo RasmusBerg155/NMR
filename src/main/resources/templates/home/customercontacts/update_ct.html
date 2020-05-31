@@ -12,10 +12,13 @@
 <body>
 <h1>Update Customer Contacts</h1>
 <form action="/UpdateCustomerContacts" method="post">
-    <input type="text" name="contact_id" th:value="${customercontacts.contact_id}">
-    <input type="text" name="e_mail" th:value="${customercontacts.e_mail}">
-    <input type="text" name="phone" th:value="${customercontacts.phone}">
-    <input type="submit" value="Save changes">
+    <div><label>Update the contact ID:</label><br>
+    <input type="text" name="contact_id" th:value="${customercontacts.contact_id}"></div>
+    <div><label>Update the e_mail:</label><br>
+    <input type="text" name="e_mail" th:value="${customercontacts.e_mail}"></div>
+    <div><label>Update the phone:</label><br>
+    <input type="text" name="phone" th:value="${customercontacts.phone}"></div><br>
+    <div><input style="background-color: steelblue" type="submit" value="Save changes"></div>
 </form>
 
 </body>

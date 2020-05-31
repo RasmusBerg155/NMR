@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -10,12 +10,17 @@
     <h1>Update Motorhome Details</h1>
 
     <form action="/UpdateMotorhomeDetails" method="post">
-         <input type="text" name="motorhome_detail_id" th:value="${motorhomedetails.motorhome_detail_id}">
-         <input type="text" name="km" th:value="${motorhomedetails.km}">
-         <input type="text" name="passengers" th:value="${motorhomedetails.passengers}">
-         <input type="text" name="price_per_day" th:value="${motorhomedetails.price_per_day}">
-         <input type="text" name="extra" th:value="${motorhomedetails.extra}">
-         <input type="submit" value="Save changes">
+        <div><label>Update the detail ID:</label><br>
+            <input type="text" name="motorhome_detail_id" th:value="${motorhomedetails.motorhome_detail_id}"></div>
+        <div><label>Update kilometers:</label><br>
+            <input type="text" name="km" th:value="${motorhomedetails.km}"></div>
+        <div><label>Update passengers:</label><br>
+            <input type="text" name="passengers" th:value="${motorhomedetails.passengers}"></div>
+        <div><label>Update price/day:</label><br>
+            <input type="text" name="price_per_day" th:value="${motorhomedetails.price_per_day}"></div>
+        <div><label>Update extra:</label><br>
+            <input type="text" name="extra" th:value="${motorhomedetails.extra}"></div><br>
+        <input style="background-color: steelblue" type="submit" value="Save changes">
     </form>
 </body>
 </html>

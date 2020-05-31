@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="tableDesign.css">
+    <link rel="stylesheet" href="menustyles.css">
 </head>
 <body>
     <h1>Edit customer</h1>
 
     <form action="/updateCustomer" method="post">
-        <input type="text" name="customer_id" th:value="${customers.customer_id}">
-        <input type="text" name="first_name"  th:value="${customers.customer_id}">
-        <input type="text" name="last_name"   th:value="${customers.customer_id}">
-        <input type="text" name="contact_id"  th:value="${customers.customer_id}">
-        <input type="text" name="address_id"  th:value="${customers.customer_id}">
-        <input type="submit" value="Save changes">
+        <div><label>Update the ID:</label><br>
+        <input type="text" name="customer_id" th:value="${customers.customer_id}"></div>
+        <div><label>Update first name:</label><br>
+        <input type="text" name="first_name"  th:value="${customers.fist_name}"></div>
+        <div><label>Update last name:</label><br>
+        <input type="text" name="last_name"   th:value="${customers.last_name}"></div>
+        <div><label>Update the contact ID:</label><br>
+        <input type="text" name="contact_id"  th:value="${customers.contact_id}"></div>
+        <div><label>Update the address ID:</label><br>
+        <input type="text" name="address_id"  th:value="${customers.address_id}"></div><br>
+        <div><input style="background-color: steelblue" type="submit" value="Save changes"></div>
     </form>
 </body>
 </html>

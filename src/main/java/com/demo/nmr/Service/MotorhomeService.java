@@ -24,7 +24,7 @@ public class MotorhomeService {
         return motorhomeRepo.findMotorhomeById(motorhome_id);
     }
 
-    public Boolean deleteMotorhome(int motorhome_id){
+    public boolean deleteMotorhome(int motorhome_id){
         return motorhomeRepo.deleteMotorhome(motorhome_id);
     }
 
