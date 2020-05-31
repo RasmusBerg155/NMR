@@ -29,7 +29,7 @@ public class PickUpDropOffService {
         return pickUpDropOffRepo.deletePickUpDropOff(pd_id);
     }
 
-    public PickUpDropOff updatePickUpDropOff(int pd_id, PickUpDropOffRepo p){
+    public PickUpDropOff updatePickUpDropOff(int pd_id, PickUpDropOff p){
         return pickUpDropOffRepo.updatePickUpDropOff(pd_id, p);
     }
 }

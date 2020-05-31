@@ -32,12 +32,17 @@
             <td>
                 <a th:href="@{'/viewPD/'+${pickupdropoff.pd_id}}">
                     <button class="btn-viewPD", id="btn-viewPD">
-                        View this
+                        View
                     </button>
                 </a>
                 <a th:href="@{'/deletePD/'+${pickupdropoff.pd_id}}">
                     <button class="btn-deletePD", id="btn-deletePD">
-                        Delete song
+                        Delete
+                    </button>
+                </a>
+                <a th:href="@{'/updatePD/'+${pickupdropoff.pd_id}}">
+                    <button class="btn-updatePD", id="btn-updatePD">
+                        Update
                     </button>
                 </a>
             </td>

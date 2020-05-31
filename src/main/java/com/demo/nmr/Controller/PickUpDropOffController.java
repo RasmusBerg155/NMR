@@ -1,5 +1,6 @@
 package com.demo.nmr.Controller;
 
+import com.demo.nmr.Model.MotorhomeDetails;
 import com.demo.nmr.Model.PickUpDropOff;
 import com.demo.nmr.Service.PickUpDropOffService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,5 +51,17 @@ public class PickUpDropOffController {
         } else {
             return "redirect:/";
         }
+    }
+
+    @GetMapping("/updatePD/{pd_id}")
+    public String updatePickUpDropOffById(@PathVariable("pd_id") int pd_id, Model model){
+        model.addAttribute("pickupdropoff", pickUpDropOffService.findPickUpDropOffById(pd_id));
+        return "home/pickupdropoff/update_pd";
+    }
+
+    @PostMapping("/updatePD")
+    public String updatePickUpDropOff(@ModelAttribute PickUpDropOff pickUpDropOff){
+        pickUpDropOffService.updatePickUpDropOff(pickUpDropOff.getPd_id(), pickUpDropOff);
+        return "redirect:/";
     }
 }

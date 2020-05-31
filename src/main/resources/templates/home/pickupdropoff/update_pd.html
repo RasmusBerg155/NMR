@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Edit motorhome</h1>
+
+<form action="/updatePD" method="post">
+    <input type="text" name="pd_id" th:value="${pickupdropoff.pd_id}">
+    <input type="text" name="pick_up_location" th:value="${pickupdropoff.pick_up_location}">
+    <input type="text" name="pick_up_distance" th:value="${pickupdropoff.pick_up_distance}">
+    <input type="text" name="drop_off_location" th:value="${pickupdropoff.drop_off_location}">
+    <input type="text" name="drop_off_distance" th:value="${pickupdropoff.drop_off_distance}">
+    <input type="submit" value="Save changes">
+
+</form>
+</body>
+</html>
