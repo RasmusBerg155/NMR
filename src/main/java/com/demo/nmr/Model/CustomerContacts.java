@@ -4,6 +4,7 @@ import javax.persistence.Id;
 
 @Entity
 public class CustomerContacts {
+
     @Id
     private int contact_id;
     private String e_mail;

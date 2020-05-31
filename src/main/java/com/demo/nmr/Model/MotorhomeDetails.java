@@ -5,6 +5,7 @@ import javax.persistence.Id;
 
 @Entity
 public class MotorhomeDetails {
+
     @Id
     private int motorhome_detail_id;
     private double km;

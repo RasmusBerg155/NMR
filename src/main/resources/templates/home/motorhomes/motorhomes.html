@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="MotorhomeCSS.css">
+    <link rel="stylesheet" type="text/css" href="motorhome.css">
 </head>
 <body>
     <h1>Motorhome List</h1>
@@ -21,20 +21,20 @@
     </tr>
         </thead>
     <tbody>
-    <tr th:each="motorhome: ${motorhomes}">
-        <td th:text="${motorhome.motorhome_id}">
-        <td th:text="${motorhome.brand}">
-        <td th:text="${motorhome.model}">
-        <td th:text="${motorhome.motorhome_detail_id}">
+    <tr th:each="motorhomes: ${motorhomes}">
+        <td th:text="${motorhomes.motorhome_id}">
+        <td th:text="${motorhomes.brand}">
+        <td th:text="${motorhomes.model}">
+        <td th:text="${motorhomes.motorhome_detail_id}">
         <td>
-            <a th:href="@{'/viewMH/'+${motorhome_id}}">
+            <a th:href="@{'/viewMH/'+${motorhomes.motorhome_id}}">
                 <button class ="btn-viewMH", id="btn-viewMH">View</button>
             </a>
-             <a th:href="@{'/deleteMH/'+${motorhome_id}}">
+             <a th:href="@{'/deleteMH/'+${motorhomes.motorhome_id}}">
                 <button class ="btn-deleteMH", id="btn-deleteMH">Delete</button>
              </a>
-            <a th:href="@{'/updateMH/'+${motorhome_id}}">
-                <button class ="btn-updateMH", id="btn-updateMH">Edit person</button>
+            <a th:href="@{'/updateMH/'+${motorhomes.motorhome_id}}">
+                <button class ="btn-updateMH", id="btn-updateMH">Edit</button>
             </a>
         </td>
     </tr>

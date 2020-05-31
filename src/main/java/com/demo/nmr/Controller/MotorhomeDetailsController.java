@@ -21,12 +21,12 @@ public class MotorhomeDetailsController {
     public String showMotorhomeDetails(Model model){
         List<MotorhomeDetails> motorhomeDetailsList = motorhomeDetailsService.fetchAll();
         model.addAttribute("motorhomedetails", motorhomeDetailsList);
-        return "home/motorhomes/motorhomedetails";
+        return "home/motorhomedetails/motorhomedetails";
     }
 
     @GetMapping("/CreateMotorhomeDetails")
     public String createMotorhomeDetails(){
-        return "home/motorhomes/createmotorhomedetails";
+        return "home/motorhomedetails/create_md";
     }
 
     @PostMapping("/CreateMotorhomeDetails")
@@ -38,7 +38,7 @@ public class MotorhomeDetailsController {
     @GetMapping("/ViewOneMotorhomeDetail/{motorhome_detail_id}")
     public String viewOneMotorhomeDetail(@PathVariable("motorhome_detail_id") int motorhome_detail_id, Model model){
        model.addAttribute("motorhomedetails", motorhomeDetailsService.findMotorhomeDetailsById(motorhome_detail_id));
-       return "home/motorhomes/viewOneMotorhomeDetail";
+       return "home/motorhomedetails/view_md";
     }
 
     @GetMapping("/DeleteMotorhomeDetails/{motorhome_detail_id}")
@@ -54,7 +54,7 @@ public class MotorhomeDetailsController {
     @GetMapping("/UpdateMotorhomeDetails/{motorhome_detail_id}")
     public String updateMotorhomeDetailsId(@PathVariable("motorhome_detail_id") int motorhome_detail_id, Model model){
         model.addAttribute("motorhomedetails", motorhomeDetailsService.findMotorhomeDetailsById(motorhome_detail_id));
-        return "home/motorhomes/updateMotorhomeDetails";
+        return "home/motorhomedetails/update_md";
     }
 
     @PostMapping("/UpdateMotorhomeDetails")

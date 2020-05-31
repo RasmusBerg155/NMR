@@ -27,7 +27,7 @@ public class PickUpDropOffController {
 
     @GetMapping("/createDP")
     public String createDP() {
-        return "home/pickupdropoff/createPD";
+        return "home/pickupdropoff/create_pd";
     }
 
     @PostMapping("/createDP")
@@ -39,7 +39,7 @@ public class PickUpDropOffController {
     @GetMapping("/viewPD/{pd_id}")
     public String viewPD(@PathVariable("pd_id") int pd_id, Model model){
         model.addAttribute("pickupdropoff", pickUpDropOffService.findPickUpDropOffById(pd_id));
-        return "home/pickupdropoff/viewPD";
+        return "home/pickupdropoff/view_pd";
     }
 
     @GetMapping("/deletePD/{pd_id}")

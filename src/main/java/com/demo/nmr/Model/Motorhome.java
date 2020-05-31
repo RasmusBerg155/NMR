@@ -4,6 +4,7 @@ import javax.persistence.*;
 
 @Entity
 public class Motorhome {
+
     @Id
     private int motorhome_id;
     private String brand;

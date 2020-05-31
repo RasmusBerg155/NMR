@@ -33,7 +33,7 @@ public class MotorhomeDetailsRepo {
         return m;
     }
 
-    public Boolean deleteMotorhomeDetailsById(int motorhome_detail_id){
+    public boolean deleteMotorhomeDetailsById(int motorhome_detail_id){
         String sql = "DELETE FROM motorhome_details WHERE motorhome_detail_id = ?";
         return template.update(sql, motorhome_detail_id) < 0;
     }

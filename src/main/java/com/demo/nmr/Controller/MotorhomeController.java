@@ -25,7 +25,7 @@ public class MotorhomeController {
     }
     @GetMapping("/createMH")
         public String createMH(){
-         return "home/motorhomes/CreateMhomes";
+         return "home/motorhomes/create_mh";
     }
 
     @PostMapping("/createMH")
@@ -33,11 +33,13 @@ public class MotorhomeController {
         motorhomeService.addMotorhome(motorhome);
         return "redirect:/";
     }
+
     @GetMapping("/viewMH/{motorhome_id}")
     public String viewMH(@PathVariable("motorhome_id")int motorhome_id, Model model){
         model.addAttribute("motorhomes", motorhomeService.findMotorhomeById(motorhome_id));
-        return "home/motorhomes/viewMH";
+        return "home/motorhomes/view_mh";
     }
+
     @GetMapping("/deleteMH/{motorhome_id}")
     public String deleteMH(@PathVariable("motorhome_id")int motorhome_id) {
         boolean deleted = motorhomeService.deleteMotorhome(motorhome_id);
@@ -47,11 +49,13 @@ public class MotorhomeController {
             return "redirect:/";
         }
     }
+
     @GetMapping("/updateMH/{motorhome_id}")
     public String updateMH(@PathVariable("motorhome_id")int motorhome_id, Model model){
         model.addAttribute("motorhomes", motorhomeService.findMotorhomeById(motorhome_id));
-        return "home/motorhomes/updateMH";
+        return "home/motorhomes/update_mh";
     }
+
     @PostMapping("/updateMH")
     public String updateMH(@ModelAttribute Motorhome motorhome){
         motorhomeService.updateMotorhome(motorhome.getMotorhome_id(), motorhome);

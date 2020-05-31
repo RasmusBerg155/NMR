@@ -5,6 +5,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Customer {
+
     @Id
     private int customer_id;
     private String first_name;
