@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="pickupdropoff.css">
+    <link rel="stylesheet" type="text/css" href="tableDesign.css">
+    <link rel="stylesheet" href="menustyles.css">
 </head>
 <body>
     <h1>
@@ -11,17 +12,17 @@
     </h1>
 
     <form action="/createDP" method="post">
-        <label>Enter new PD_ID</label>
-        <input type="text" name="pd_id">
-        <label>Enter new pick up location</label>
-        <input type="text" name="pick_up_location">
-        <label>Enter new pick up distance</label>
-        <input type="text" name="pick_up_distance">
-        <label>Enter new drop off location</label>
-        <input type="text" name="drop_off_location">
-        <label>Enter new drop off distance</label>
-        <input type="text" name="drop_off_distance">
-        <input type="submit" value="Create new Pick-up/Drop-off">
+        <div><label>Enter new PD_ID:</label>
+        <input type="text" name="pd_id"></div>
+        <div><label>Enter new pick up location:</label>
+        <input type="text" name="pick_up_location"></div>
+        <div><label>Enter new pick up distance:</label>
+        <input type="text" name="pick_up_distance"></div>
+        <div><label>Enter new drop off location:</label>
+        <input type="text" name="drop_off_location"></div>
+        <div><label>Enter new drop off distance:</label>
+        <input type="text" name="drop_off_distance"></div>
+        <div><input style="background-color: lightsalmon" type="submit" value="Create new Pick-up/Drop-off"></div>
     </form>
 </body>
 </html>

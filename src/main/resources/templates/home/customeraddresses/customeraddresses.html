@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="customer.css">
+    <link rel="stylesheet" type="text/css" href="tableDesign.css">
+    <link rel="stylesheet" href="menustyles.css">
 </head>
 <body>
 <h1>Customer Addresses</h1>
@@ -22,6 +23,7 @@
         <th>City</th>
         <th>Country</th>
         <th>ZIP</th>
+        <th>Make Changes</th>
     </tr>
     </thead>
     <tbody>
@@ -35,19 +37,19 @@
         <td>
             <a th:href="@{'/ViewOneCustomerAddresses/'+${customeraddresses.address_id}}">
                 <button class="btn-viewOneCustomerAddresses", id="btn-viewOneCustomerAddresses">
-                    View One Customer Address
+                    View
                 </button>
             </a>
 
             <a th:href="@{'/DeleteCustomerAddresses/'+${customeraddresses.address_id}}">
                 <button class="btn-deleteCustomerAddresses", id="btn-deleteCustomerAddresses">
-                    Delete Customer Address
+                    Delete
                 </button>
             </a>
 
             <a th:href="@{'/UpdateCustomerAddresses/'+${customeraddresses.address_id}}">
                 <button class="btn-updateCustomerAddresses", id="btn-updateCustomerAddresses">
-                    Update Customer Address
+                    Update
                 </button>
             </a>
         </td>

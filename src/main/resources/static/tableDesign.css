@@ -1,3 +1,5 @@
+/* IN THIS CLASS ARE THE DESIGNS OF ALL THE TABLES & AND TABLE BUTTONS */
+
 table{
     border-collapse: collapse;
     width: max-content;
@@ -60,5 +62,18 @@ td{
     background-color: lightsalmon;
 }
 #btn-updatePD{
+    background-color: lightsalmon;
+}
+#btn-createCustomerAddresses{
+    background-color: steelblue;
+    margin-bottom: 10px;
+}
+#btn-viewOneCustomerAddresses{
+    background-color: lightsalmon;
+}
+#btn-deleteCustomerAddresses{
+    background-color: lightsalmon;
+}
+#btn-updateCustomerAddresses{
     background-color: lightsalmon;
 }
