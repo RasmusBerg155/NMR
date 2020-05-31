@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="customer.css">
+</head>
+<body>
+<h1>Update Customer Addresses</h1>
+
+<form action="/UpdateCustomerAddresses" method="post">
+    <input type="text" name="address_id" th:value="${customeraddresses.address_id}">
+    <input type="text" name="street_name" th:value="${customeraddresses.street_name}">
+    <input type="text" name="street_no" th:value="${customeraddresses.street_no}">
+    <input type="text" name="city" th:value="${customeraddresses.city}">
+    <input type="text" name="country" th:value="${customeraddresses.country}">
+    <input type="text" name="zip" th:value="${customeraddresses.zip}">
+    <input type="submit" value="Save changes">
+</form>
+</body>
+</html>

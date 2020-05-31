@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="customer.css">
+</head>
+<body>
+<h1>Customer Addresses</h1>
+<a href="/CreateCustomerAddresses">
+    <button class="btn-createCustomerAddresses" id="btn-createCustomerAddresses">
+        Create new Customer Address
+    </button>
+</a>
+
+<table>
+    <thead>
+    <tr>
+        <th>Address_ID</th>
+        <th>Street_Name</th>
+        <th>Street_NO</th>
+        <th>City</th>
+        <th>Country</th>
+        <th>ZIP</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="customeraddresses: ${customeraddresses}">
+        <td th:text="${customeraddresses.address_id}"></td>
+        <td th:text="${customeraddresses.street_name}"></td>
+        <td th:text="${customeraddresses.street_no}"></td>
+        <td th:text="${customeraddresses.city}"></td>
+        <td th:text="${customeraddresses.country}"></td>
+        <td th:text="${customeraddresses.zip}"></td>
+        <td>
+            <a th:href="@{'/ViewOneCustomerAddresses/'+${customeraddresses.address_id}}">
+                <button class="btn-viewOneCustomerAddresses", id="btn-viewOneCustomerAddresses">
+                    View One Customer Address
+                </button>
+            </a>
+
+            <a th:href="@{'/DeleteCustomerAddresses/'+${customeraddresses.address_id}}">
+                <button class="btn-deleteCustomerAddresses", id="btn-deleteCustomerAddresses">
+                    Delete Customer Address
+                </button>
+            </a>
+
+            <a th:href="@{'/UpdateCustomerAddresses/'+${customeraddresses.address_id}}">
+                <button class="btn-updateCustomerAddresses", id="btn-updateCustomerAddresses">
+                    Update Customer Address
+                </button>
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
