@@ -1,5 +1,3 @@
-<!-- THIS FUNCTION IS UNDER REVIEW
-
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
@@ -10,28 +8,41 @@
 <body>
 <h1>Customer List</h1>
 
-<table>
-    <thead>
-    <tr>
-        <th>Customer_ID</th>
-        <th>First_Name</th>
-        <th>Last_Name</th>
-        <th>Contact_ID</th>
-        <th>Address_ID</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="customers: ${customers}">
-        <td th:text="${customers.Customer_id}"></td>
-        <td th:text="${customers.First_name}"></td>
-        <td th:text="${customers.Last_name}"></td>
-        <td th:text="${customers.Contact_id}"></td>
-        <td th:text="${customers.Address_id}"></td>
-    </tr>
-    </tbody>
+    <a href="/createCustomer">
+        <button class ="btn-createCustomer" id="btn-createCustomer">Create new Customer</button>
+    </a>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Customer_ID</th>
+            <th>First_Name</th>
+            <th>Last_Name</th>
+            <th>Contact_ID</th>
+            <th>Address_ID</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="customers: ${customers}">
+            <td th:text="${customers.customer_id}"></td>
+            <td th:text="${customers.first_name}"></td>
+            <td th:text="${customers.last_name}"></td>
+            <td th:text="${customers.contact_id}"></td>
+            <td th:text="${customers.address_id}"></td>
+        </tr>
+        <td>
+            <a th:href="@{'/viewCustomer/'+${customers.customer_id}}">
+                <button class ="btn-viewCustomer", id="btn-viewCustomer">View</button>
+            </a>
+            <a th:href="@{'/deleteCustomer/'+${customers.customer_id}}">
+                <button class ="btn-deleteCustomer", id="btn-deleteCustomer">Delete</button>
+            </a>
+            <a th:href="@{'/updateCustomer/'+${customers.customer_id}}">
+                <button class ="btn-updateCustomer", id="btn-updateCustomer">Edit</button>
+            </a>
+        </td>
+        </tbody>
 </table>
 </body>
 </html>
 
-
--->

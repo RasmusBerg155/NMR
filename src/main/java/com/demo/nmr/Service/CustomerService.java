@@ -25,7 +25,7 @@ public class CustomerService {
         return customerRepo.findCustomerById(customer_id);
     }
 
-    public Boolean deleteCustomer(int customer_id){
+    public boolean deleteCustomer(int customer_id){
         return customerRepo.deleteCustomer(customer_id);
     }
 
