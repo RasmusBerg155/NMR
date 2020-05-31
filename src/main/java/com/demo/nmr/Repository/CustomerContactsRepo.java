@@ -31,7 +31,7 @@ public class CustomerContactsRepo {
         return c;
     }
 
-    public boolean deleteCustomerContacts (int id){
+   public boolean deleteCustomerContacts (int id){
         String sql = "DELETE FROM `nordic-motorhome`.`customer_contacts` WHERE `contact_id` = ?;";
         return template.update(sql, id) < 0;
     }

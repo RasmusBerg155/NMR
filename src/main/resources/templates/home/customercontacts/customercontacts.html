@@ -8,19 +8,49 @@
 </head>
 <body>
     <h1>Customer Contacts</h1>
+    <a href="/CreateCustomerContacts">
+        <button class="btn-createCustomerContacts" id="btn-createCustomerContacts">
+            Create
+        </button>
+    </a>
+
+
     <table>
         <thead>
         <tr>
             <th>Contact ID</th>
             <th>E_mail</th>
             <th>Phone Number</th>
+            <th>Make Changes</th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="customercontacts: ${customercontacts}">
+        <tr th:each="customercontacts: ${CustomerContacts}">
             <td th:text="${customercontacts.contact_id}">
             <td th:text="${customercontacts.e_mail}">
             <td th:text="${customercontacts.phone}">
+            <td>
+
+            <a th:href="@{'/ViewOneCustomerContacts/'+${customercontacts.contact_id}}">
+                <button class="btn-view_ct", id="btn-view_ct">
+                    View
+                </button>
+            </a>
+
+            <a th:href="@{'/DeleteCustomerContacts/'+${customercontacts.contact_id}}">
+                <button class="btn-delete_ct", id="btn-delete_ct">
+                    Delete
+                </button>
+            </a>
+
+
+            <a th:href="@{'/UpdateCustomerContacts/'+${customercontacts.contact_id}}">
+                <button class="btn-update_ct", id="btn-update_ct">
+                    Update
+                </button>
+            </a>
+
+        </td>
         </tr>
         </tbody>
     </table>

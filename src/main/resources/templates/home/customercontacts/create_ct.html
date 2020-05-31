@@ -1,4 +1,4 @@
-<!-- THIS FUNCTION IS UNDER REVIEW AND IS TEMPORARILY ELIMINATED
+
 
 
 <!DOCTYPE html>
@@ -6,18 +6,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="customer.css">
 </head>
 <body>
-<h1>Please insert the data for the new customer contacts.</h1>
-<form action="/CreateCustomerContact", method="post">
-    <label>Enter the contact ID</label>
-    <input type="text", name="contact_id">
-    <label>Enter the E_Mail</label>
-    <input type="text", name="e_mail">
-    <label>Enter the Phone</label>
-    <input type="text", name="phone">
-    <input type="submit", value="Create new customer contact">
+h1>Create new Customer Contacts</h1>
+
+<form action="/CreateCustomerContacts" method="post">
+    <label>Enter Customer Contacts ID</label>
+    <input type="text" name="contact_id">
+    <label>Enter E-MAIL</label>
+    <input type="text" name="e_mail">
+    <label>Enter Phone Number</label>
+    <input type="text" name="phone">
+    <input style="background-color: lightpink" type="submit" value="Create new Customer Contacts">
 </form>
 
 </body>
-</html>    -->
+</html>

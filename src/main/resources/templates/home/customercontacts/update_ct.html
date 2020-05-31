@@ -1,4 +1,4 @@
-<!-- THIS FUNCTION IS UNDER REVIEW AND IS TEMPORARILY ELIMINATED
+
 
 
 <!DOCTYPE html>
@@ -6,15 +6,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Nordic Motorhomes</title>
+    <link rel="stylesheet" type="text/css" href="tableDesign.css">
+    <link rel="stylesheet" href="menustyles.css">
 </head>
 <body>
-<h1>Please update the desired field(s).</h1>
+<h1>Update Customer Contacts</h1>
 <form action="/UpdateCustomerContacts" method="post">
-    <input type="text" name="contact_id" th:value="${customerContact.contact_id}">  --><!-- the name here must be the same as in the controller *** -->
-   <!--  <input type="text" name="e_mail" th:value="${customerContact.e_mail}">
-    <input type="text" name="phone" th:value="${customerContact.phone}">
-    <button type="submit" value="Perform changes">Submit</button>
+    <input type="text" name="contact_id" th:value="${customercontacts.contact_id}">
+    <input type="text" name="e_mail" th:value="${customercontacts.e_mail}">
+    <input type="text" name="phone" th:value="${customercontacts.phone}">
+    <input type="submit" value="Save changes">
 </form>
 
 </body>
-</html>  -->
+</html>
