@@ -2,15 +2,14 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="tableDesign.css">
+    <title>Create Motorhome</title>
+    <link rel="stylesheet" href="formDesign.css">
     <link rel="stylesheet" href="menustyles.css">
 </head>
 <body>
     <h1>Create new Motorhome</h1>
-
-    <form action="/createMH" method="post">
-        <div><label>Enter ID:</label><br>
+    <form class="CreationMenus" action="/createMH" method="post">
+        <div><label>Enter Motorhome ID:</label><br>
         <input type="text" name="motorhome_id" placeholder="- nothing added -" style="text-align: center"></div>
         <div><label>Enter Brand:</label><br>
         <input type="text" name="brand" placeholder="- nothing added -" style="text-align: center"></div>
@@ -18,7 +17,7 @@
         <input type="text" name="model" placeholder="- nothing added -" style="text-align: center"></div>
         <div><label>Enter Motorhome Detail_ID:</label><br>
         <input type="text" name="motorhome_detail_id" placeholder="- nothing added -" style="text-align: center"></div><br>
-        <div><input style="background-color: steelblue" type="submit" value="Create new motorhome"></div>
+        <div><input style="background-color: lightsalmon" type="submit" value="Create new motorhome"></div><br>
     </form>
 </body>
 </html>

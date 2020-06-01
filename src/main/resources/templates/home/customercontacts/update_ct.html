@@ -1,25 +1,21 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Nordic Motorhomes</title>
-    <link rel="stylesheet" type="text/css" href="tableDesign.css">
+    <title>Update Customer Contacts</title>
+    <link rel="stylesheet" href="formDesign.css">
     <link rel="stylesheet" href="menustyles.css">
 </head>
 <body>
 <h1>Update Customer Contacts</h1>
-<form action="/UpdateCustomerContacts" method="post">
-    <div><label>Update the contact ID:</label><br>
+<form class="UpdateMenus" action="/UpdateCustomerContacts" method="post">
+    <div><label>Update Contact ID:</label><br>
     <input type="text" name="contact_id" th:value="${customercontacts.contact_id}"></div>
-    <div><label>Update the e_mail:</label><br>
+    <div><label>Update E-Mail:</label><br>
     <input type="text" name="e_mail" th:value="${customercontacts.e_mail}"></div>
-    <div><label>Update the phone:</label><br>
+    <div><label>Update Phone:</label><br>
     <input type="text" name="phone" th:value="${customercontacts.phone}"></div><br>
-    <div><input style="background-color: steelblue" type="submit" value="Save changes"></div>
+    <div><input style="background-color: lightsalmon" type="submit" value="Save changes"></div><br>
 </form>
-
 </body>
 </html>

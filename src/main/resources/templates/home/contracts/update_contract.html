@@ -2,21 +2,19 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Update Contracts</title>
+    <link rel="stylesheet" href="formDesign.css">
+    <link rel="stylesheet" href="menustyles.css">
 </head>
 <body>
-    <h1>Edit contract</h1>
-
-    <form action="/updateContract" method="post">
-
+    <h1>Update contract</h1>
+    <form class="UpdateMenus" action="/updateContract" method="post">
     <input type="text" name="contract_id   th:value="${customers.customer_id}">
     <input type="text" name="pd_id"        th:value="${customers.customer_id}">
     <input type="text" name="tc_id"        th:value="${customers.customer_id}">
     <input type="text" name="motorhome_id" th:value="${customers.customer_id}">
     <input type="text" name="customer_id"  th:value="${customers.customer_id}">
-
-    <input type="submit" value="Save changes">
-
+    <input style="background-color: lightsalmon" type="submit" value="Save changes">
 </form>
 </body>
 </html>

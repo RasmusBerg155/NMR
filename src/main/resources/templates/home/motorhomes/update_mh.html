@@ -2,24 +2,22 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="tableDesign.css">
+    <title>Update Motorhome</title>
+    <link rel="stylesheet" href="formDesign.css">
     <link rel="stylesheet" href="menustyles.css">
 </head>
-<body>
-    <h1>Edit motorhome</h1>
-
+<body style="background-image: url('LakeRV.jpg'); background-position: top; background-repeat: initial; background-size: 100%;">
+    <h1>Update Motorhome</h1>
     <form action="/updateMH" method="post">
-        <div><label>Update the ID:</label><br>
+        <div><label>Update ID:</label><br>
         <input type="text" name="motorhome_id" th:value="${motorhomes.motorhome_id}"></div>
-        <div><label>Update brand:</label><br>
+        <div><label>Update Brand:</label><br>
         <input type="text" name="brand" th:value="${motorhomes.brand}"></div>
-        <div><label>Update model:</label><br>
+        <div><label>Update Model:</label><br>
         <input type="text" name="model" th:value="${motorhomes.model}"></div>
-        <div><label>Update the detail ID:</label><br>
+        <div><label>Update Detail ID:</label><br>
         <input type="text" name="motorhome_detail_id" th:value="${motorhomes.motorhome_detail_id}"></div><br>
-        <div><input style="background-color: steelblue" type="submit" value="Save changes"></div>
-
+        <div><input style="background-color: lightsalmon" type="submit" value="Save changes"></div><br>
     </form>
 </body>
 </html>

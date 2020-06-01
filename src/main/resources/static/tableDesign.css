@@ -3,6 +3,18 @@
 table{
     border-collapse: collapse;
     width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.CenterTables{
+    position: center;
+    alignment: center;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    margin-left: 25%;
+    margin-right: 25%;
+
 }
 th{
     background-color: steelblue;
@@ -102,5 +114,18 @@ td{
     background-color: lightsalmon;
 }
 #btn-update_ct{
+    background-color: lightsalmon;
+}
+#btn-createTC{
+    background-color: steelblue;
+    margin-bottom: 10px;
+}
+#btn-viewTC{
+    background-color: lightsalmon;
+}
+#btn-deleteTC{
+    background-color: lightsalmon;
+}
+#btn-updateTC{
     background-color: lightsalmon;
 }

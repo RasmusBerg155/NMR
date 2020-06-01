@@ -2,25 +2,24 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="tableDesign.css">
+    <title>Update Customer</title>
+    <link rel="stylesheet" href="formDesign.css">
     <link rel="stylesheet" href="menustyles.css">
 </head>
 <body>
-    <h1>Edit customer</h1>
-
-    <form action="/updateCustomer" method="post">
-        <div><label>Update the ID:</label><br>
+    <h1>Update Customer</h1>
+    <form class="UpdateMenus" action="/updateCustomer" method="post">
+        <div><label>Update Customer ID:</label><br>
         <input type="text" name="customer_id" th:value="${customers.customer_id}"></div>
-        <div><label>Update first name:</label><br>
+        <div><label>Update First Name:</label><br>
         <input type="text" name="first_name"  th:value="${customers.fist_name}"></div>
-        <div><label>Update last name:</label><br>
+        <div><label>Update Last Name:</label><br>
         <input type="text" name="last_name"   th:value="${customers.last_name}"></div>
-        <div><label>Update the contact ID:</label><br>
+        <div><label>Update Contact ID:</label><br>
         <input type="text" name="contact_id"  th:value="${customers.contact_id}"></div>
-        <div><label>Update the address ID:</label><br>
+        <div><label>Update Address ID:</label><br>
         <input type="text" name="address_id"  th:value="${customers.address_id}"></div><br>
-        <div><input style="background-color: steelblue" type="submit" value="Save changes"></div>
+        <div><input style="background-color: lightsalmon" type="submit" value="Save changes"></div><br>
     </form>
 </body>
 </html>

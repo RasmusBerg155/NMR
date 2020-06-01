@@ -2,27 +2,26 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="tableDesign.css">
+    <title>Update Customer Addresses</title>
+    <link rel="stylesheet" href="formDesign.css">
     <link rel="stylesheet" href="menustyles.css">
 </head>
 <body>
 <h1>Update Customer Addresses</h1>
-
-<form action="/UpdateCustomerAddresses" method="post">
-    <div><label>Update the address ID:</label><br>
+<form class="UpdateMenus" action="/UpdateCustomerAddresses" method="post">
+    <div><label>Update Address ID:</label><br>
     <input type="text" name="address_id" th:value="${customeraddresses.address_id}"></div>
-    <div><label>Update street name:</label><br>
+    <div><label>Update Street Name:</label><br>
     <input type="text" name="street_name" th:value="${customeraddresses.street_name}"></div>
-    <div><label>Update street no.:</label><br>
+    <div><label>Update Street no.:</label><br>
     <input type="text" name="street_no" th:value="${customeraddresses.street_no}"></div>
-    <div><label>Update city:</label><br>
+    <div><label>Update City:</label><br>
     <input type="text" name="city" th:value="${customeraddresses.city}"></div>
-    <div><label>Update country:</label><br>
+    <div><label>Update Country:</label><br>
     <input type="text" name="country" th:value="${customeraddresses.country}"></div>
-    <div><label>Update ZIP:</label><br>
+    <div><label>Update ZIP Code:</label><br>
     <input type="text" name="zip" th:value="${customeraddresses.zip}"></div><br>
-    <div><input style="background-color: steelblue" type="submit" value="Save changes"></div>
+    <div><input style="background-color: lightsalmon" type="submit" value="Save changes"></div><br>
 </form>
 </body>
 </html>

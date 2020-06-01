@@ -2,27 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="tableDesign.css">
+    <title>Create Pick-up & Drop-off</title>
+    <link rel="stylesheet" href="formDesign.css">
     <link rel="stylesheet" href="menustyles.css">
 </head>
 <body>
     <h1>
-        Create new Pick-off and drop-off
+        Create new Pick-off and Drop-off
     </h1>
 
-    <form action="/createDP" method="post">
-        <div><label>Enter new PD_ID:</label><br>
+    <form class="CreationMenus" action="/createDP" method="post">
+        <div><label>Enter new Pick-up/Drop-off ID:</label><br>
         <input type="text" name="pd_id" placeholder="- nothing added -" style="text-align: center"></div>
-        <div><label>Enter new pick up location:</label><br>
+        <div><label>Enter Pick-up Location:</label><br>
         <input type="text" name="pick_up_location" placeholder="- nothing added -" style="text-align: center"></div>
-        <div><label>Enter new pick up distance:</label><br>
+        <div><label>Enter Pick-up Distance:</label><br>
         <input type="text" name="pick_up_distance" placeholder="- nothing added -" style="text-align: center"></div>
-        <div><label>Enter new drop off location:</label><br>
+        <div><label>Enter Drop-off Location:</label><br>
         <input type="text" name="drop_off_location" placeholder="- nothing added -" style="text-align: center"></div>
-        <div><label>Enter new drop off distance:</label><br>
+        <div><label>Enter Drop-off Distance:</label><br>
         <input type="text" name="drop_off_distance" placeholder="- nothing added -" style="text-align: center"></div><br>
-        <div><input style="background-color: steelblue" type="submit" value="Create new Pick-up/Drop-off"></div>
+        <div><input style="background-color: lightsalmon" type="submit" value="Create new Pick-up/Drop-off"></div><br>
     </form>
 </body>
 </html>

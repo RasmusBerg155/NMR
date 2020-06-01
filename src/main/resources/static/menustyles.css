@@ -13,16 +13,6 @@ h1{
     margin-left: 25%;
     margin-right: 25%;
 }
-a:link{text-decoration: none!important;}
-
-body{
-    background-image: url("LakeRV.jpg");
-    background-position: top;
-    background-repeat: initial;
-    background-size: 100%;
-    text-decoration: none;
-    background-color: black;
-}
 
 .pagePreview{
     position: center;
@@ -34,7 +24,17 @@ body{
     margin-left: 36%;
     margin-right: 36%;
     margin-top: 10%;
-  }
+}
+
+body{
+    background-image: url("LakeRV.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    text-decoration: none;
+    background-color: black;
+}
 
 /* BELOW HERE ARE THE FRONT PAGE BUTTONS' DESIGNS */
 
