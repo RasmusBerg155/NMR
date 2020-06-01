@@ -6,20 +6,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="customer.css">
+    <link rel="stylesheet" type="text/css" href="tableDesign.css">
+    <link rel="stylesheet" href="menustyles.css">
 </head>
 <body>
-h1>Create new Customer Contacts</h1>
-
+<h1>Create new Customer Contacts</h1>
 <form action="/CreateCustomerContacts" method="post">
-    <label>Enter Customer Contacts ID</label>
-    <input type="text" name="contact_id">
-    <label>Enter E-MAIL</label>
-    <input type="text" name="e_mail">
-    <label>Enter Phone Number</label>
-    <input type="text" name="phone">
-    <input style="background-color: lightpink" type="submit" value="Create new Customer Contacts">
+   <div><label>Enter Customer Contacts ID</label><br>
+    <input type="text" name="contact_id" placeholder="- nothing added -" style="text-align: center"></div>
+    <div><label>Enter E-MAIL</label><br>
+    <input type="text" name="e_mail" placeholder="- nothing added -" style="text-align: center"></div>
+    <div><label>Enter Phone Number</label><br>
+    <input type="text" name="phone" placeholder="- nothing added -" style="text-align: center"></div><br>
+    <div><input style="background-color: lightsalmon" type="submit" value="Create new Customer Contacts"></div>
 </form>
-
 </body>
 </html>

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="customer.css">
+    <link rel="stylesheet" type="text/css" href="tableDesign.css">
+    <link rel="stylesheet" href="menustyles.css">
 </head>
 <body>
 <h1>Customer List</h1>
@@ -41,7 +42,7 @@
             </a>
 
             <a th:href="@{'/updateCustomer/'+${customers.customer_id}}">
-                <button class ="btn-updateCustomer", id="btn-updateCustomer">Edit</button>
+                <button class ="btn-updateCustomer", id="btn-updateCustomer">Update</button>
             </a>
         </td>
         </tr>
