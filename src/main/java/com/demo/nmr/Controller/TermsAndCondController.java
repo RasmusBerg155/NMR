@@ -11,13 +11,14 @@ import java.util.List;
 
 @Controller
 public class TermsAndCondController {
+
     @Autowired
     TermsAndCondService termsAndCondService;
 
-  /*  @GetMapping("/ShowTermsAndCond")
+    @GetMapping("/ShowTermsAndCond")
     public String showTermsAndCond(Model model){
         List<TermsAndCond> termsAndCondList = termsAndCondService.fetchAll();
-        model.addAttribute("termsandconditions", termsAndCondList);
+        model.addAttribute("termsandcond", termsAndCondList);
         return "home/termsandconditions/termsandcond";
-    }*/
+    }
 }
