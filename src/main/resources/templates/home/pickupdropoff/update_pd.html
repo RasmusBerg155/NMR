@@ -7,21 +7,20 @@
     <link rel="stylesheet" href="menustyles.css">
 </head>
 <body>
-<h1>Edit motorhome</h1>
+    <h1>Edit Motorhome</h1>
 
-<form action="/updatePD" method="post">
-    <div><label>Update the pick/drop ID:</label><br>
-    <input type="text" name="pd_id" th:value="${pickupdropoff.pd_id}"></div>
-    <div><label>Update pick location:</label><br>
-    <input type="text" name="pick_up_location" th:value="${pickupdropoff.pick_up_location}"></div>
-    <div><label>Update pick distance:</label><br>
-    <input type="text" name="pick_up_distance" th:value="${pickupdropoff.pick_up_distance}"></div>
-    <div><label>Update drop location:</label><br>
-    <input type="text" name="drop_off_location" th:value="${pickupdropoff.drop_off_location}"></div>
-    <div><label>Update drop distance:</label><br>
-    <input type="text" name="drop_off_distance" th:value="${pickupdropoff.drop_off_distance}"></div><br>
-    <div><input style="background-color: steelblue" type="submit" value="Save changes"></div>
-
-</form>
+    <form action="/updatePD" method="post">
+        <div><label>Update the pick/drop ID:</label><br>
+        <input type="text" name="pd_id" th:value="${pickupdropoff.pd_id}"></div>
+        <div><label>Update pick location:</label><br>
+        <input type="text" name="pick_up_location" th:value="${pickupdropoff.pick_up_location}"></div>
+        <div><label>Update pick distance:</label><br>
+        <input type="text" name="pick_up_distance" th:value="${pickupdropoff.pick_up_distance}"></div>
+        <div><label>Update drop location:</label><br>
+        <input type="text" name="drop_off_location" th:value="${pickupdropoff.drop_off_location}"></div>
+        <div><label>Update drop distance:</label><br>
+        <input type="text" name="drop_off_distance" th:value="${pickupdropoff.drop_off_distance}"></div><br>
+        <div><input style="background-color: steelblue" type="submit" value="Save Changes"></div>
+    </form>
 </body>
 </html>

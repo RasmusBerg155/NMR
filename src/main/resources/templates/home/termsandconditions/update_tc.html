@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="tableDesign.css">
+    <link rel="stylesheet" href="menustyles.css">
+</head>
+<body>
+    <h1>Edit Terms and Conditions</h1>
+
+    <form action="/updateTC" method="post">
+        <div><label>Update TC_ID</label><br>
+        <input type="text" name="tc_id" th:value="${termsandcond.tc_id}"></div>
+        <div><label>Update Season(High/Mid/Low)</label><br>
+        <input type="text" name="season" th:value="${termsandcond.season}"></div>
+        <div><label>Update Total Rent Days</label><br>
+        <input type="text" name="rent_days" th:value="${termsandcond.rent_days}"></div>
+        <div><label>Update Km Count</label><br>
+        <input type="text" name="km" th:value="${termsandcond.km}"></div>
+        <div><label>Update Fuel Tank %</label><br>
+        <input type="text" name="fuel_tank" th:value="${termsandcond.fuel_tank}"></div>
+        <div><label>Update Cancellation Notes</label><br>
+        <input type="text" name="cancellation" th:value="${termsandcond.cancellation}"></div><br>
+        <div><label>Update Notes (damages, ekstra's, etc.)</label><br>
+        <input type="text" name="notes" th:value="${termsandcond.notes}"></div>
+        <div><input style="background-color: steelblue" type="submit" value="Save Changes"></div>
+    </form>
+</body>
+</html>

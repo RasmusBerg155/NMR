@@ -41,6 +41,10 @@ public class TermsAndCondRepo {
     }
 
     public TermsAndCond updateTermsAndCond(int tc_id, TermsAndCond t){
+        String sql ="UPDATE terms_and_conditions SET tc_id = ?, season = ?, rent_days = ?, km = ?," +
+                "fuel_tank = ?, cancellation = ?, notes = ? WHERE tc_id = ?";
+        template.update(sql, t.getTc_id(), t.getSeason(), t.getRent_days(), t.getKm(),
+                t.getFuel_tank(), t.getCancellation(), t.getNotes(), t.getTc_id());
         return null;
     }
 }

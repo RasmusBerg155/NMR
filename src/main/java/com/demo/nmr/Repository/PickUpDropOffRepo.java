@@ -41,8 +41,10 @@ public class PickUpDropOffRepo {
     }
 
     public PickUpDropOff updatePickUpDropOff(int pd_id, PickUpDropOff p){
-        String sql ="UPDATE pick_up_and_drop_off SET pd_id = ?, pick_up_location = ?, pick_up_distance = ?, drop_off_location = ?, drop_off_distance = ? WHERE pd_id = ?";
-        template.update(sql, p.getPd_id(), p.getDrop_off_location(), p.getPick_up_distance(), p.getDrop_off_location(), p.getDrop_off_distance(), p.getPd_id());
+        String sql ="UPDATE pick_up_and_drop_off SET pd_id = ?, pick_up_location = ?, " +
+                "pick_up_distance = ?, drop_off_location = ?, drop_off_distance = ? WHERE pd_id = ?";
+        template.update(sql, p.getPd_id(), p.getDrop_off_location(), p.getPick_up_distance(),
+                p.getDrop_off_location(), p.getDrop_off_distance(), p.getPd_id());
         return null;
     }
 }

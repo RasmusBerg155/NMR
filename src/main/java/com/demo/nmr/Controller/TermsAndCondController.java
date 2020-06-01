@@ -51,4 +51,16 @@ public class TermsAndCondController {
             return "redirect:/";
         }
     }
+
+    @GetMapping("/updateTC/{tc_id}")
+    public String updateTermsAndCond(@PathVariable("tc_id") int tc_id, Model model){
+        model.addAttribute("termsandcond", termsAndCondService.findTermsAndCondById(tc_id));
+        return "home/termsandconditions/update_tc";
+    }
+
+    @PostMapping("updateTC")
+    public String updateTermsandCond(@ModelAttribute TermsAndCond termsAndCond){
+        termsAndCondService.updateTermsAndCond(termsAndCond.getTc_id(), termsAndCond);
+        return "redirect:/";
+    }
 }
