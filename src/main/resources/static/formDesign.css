@@ -1,0 +1,40 @@
+*{
+    font-family: Bahnschrift;
+}
+
+
+.CreationMenus{
+    position: center;
+    alignment: center;
+    text-align: center;
+    background-color: lightsteelblue;
+    margin-left: 41%;
+    margin-right: 41%;
+    margin-top: 10%;
+    opacity:80%;
+}
+
+.UpdateMenus{
+    background-image: url("LakeRV.jpg") !important;
+    background-position: top!important;
+    background-repeat: initial!important;
+    background-size: 100% !important;
+    position: center!important;
+    alignment: center!important;
+    text-align: center!important;
+    /*background-color: lightsteelblue;*/
+    /*margin-left: 41% !important;*/
+    /*margin-right: 41% !important;*/
+    /*margin-top: 10% !important;*/
+    /*opacity:80% !important;*/
+    font-family: Bahnschrift;
+}
+
+form{
+    position: center;
+    alignment: center;
+    text-align: center;
+    text-decoration: none;
+    background-color: lightsteelblue;
+    font-family: Bahnschrift;
+}
