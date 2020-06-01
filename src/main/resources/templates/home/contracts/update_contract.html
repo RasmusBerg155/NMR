@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="tableDesign.css">
+    <link rel="stylesheet" href="menustyles.css">
 </head>
 <body>
-    <h1>Edit contract</h1>
+<h1>Update Customer Addresses</h1>
 
-    <form action="/updateContract" method="post">
-
-    <input type="text" name="contract_id   th:value="${customers.customer_id}">
-    <input type="text" name="pd_id"        th:value="${customers.customer_id}">
-    <input type="text" name="tc_id"        th:value="${customers.customer_id}">
-    <input type="text" name="motorhome_id" th:value="${customers.customer_id}">
-    <input type="text" name="customer_id"  th:value="${customers.customer_id}">
-
-    <input type="submit" value="Save changes">
-
+<form action="/updateContract" method="post">
+    <div><label>Update the Contract Id:</label><br>
+        <input type="text" name="contract_id" th:value="${contracts.contract_id}"></div>
+    <div><label>Update Pick up/Drop off Id:</label><br>
+        <input type="text" name="pd_id" th:value="${contracts.pd_id}"></div>
+    <div><label>Update Terms and Conditions Id:</label><br>
+        <input type="text" name="tc_id" th:value="${contracts.tc_id}"></div>
+    <div><label>Update Motorhome Id:</label><br>
+        <input type="text" name="motorhome_id" th:value="${contracts.motorhome_id}"></div>
+    <div><label>Update Customer Id:</label><br>
+        <input type="text" name="customer_id" th:value="${contracts.customer_id}"></div>
+    <div><input style="background-color: steelblue" type="submit" value="Save changes"></div>
 </form>
 </body>
 </html>

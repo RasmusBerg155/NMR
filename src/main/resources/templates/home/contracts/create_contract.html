@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="tableDesign.css">
+    <link rel="stylesheet" href="menustyles.css">
 </head>
 <body>
+<h1>Create new Contract</h1>
 
+<form action="/CreateContract" method="post">
+    <div><label>Enter Contract Id:</label><br>
+        <input type="text" name="contract_id" placeholder="- nothing added -" style="text-align: center"></div>
+    <div><label>Enter Pick up/Drop off Id:</label><br>
+        <input type="text" name="pd_id" placeholder="- nothing added -" style="text-align: center"></div>
+    <div><label>Enter Terms and Conditions Id:</label><br>
+        <input type="text" name="tc_id" placeholder="- nothing added -" style="text-align: center"></div>
+    <div><label>Enter Motorhome Id:</label><br>
+        <input type="text" name="motorhome_id" placeholder="- nothing added -" style="text-align: center"></div>
+    <div><label>Enter Customer Id:</label><br>
+        <input type="text" name="customer_id" placeholder="- nothing added -" style="text-align: center"></div>
+    <div><input style="background-color: steelblue" type="submit" value="Create new Contract"></div>
+</form>
 </body>
 </html>

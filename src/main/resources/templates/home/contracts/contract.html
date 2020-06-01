@@ -3,46 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="customer.css">
+    <link rel="stylesheet" type="text/css" href="tableDesign.css">
+    <link rel="stylesheet" href="menustyles.css">
 </head>
 <body>
-<h1>Contract List</h1>
-
-<a href="/createContract">
-    <button class ="btn-createContract" id="btn-createContract">Create new Contract</button>
-</a>
-
-<table>
-    <thead>
-    <tr>
-        <th>Contract_ID</th>
-        <th>PD_ID</th>
-        <th>TC_ID</th>
-        <th>Motorhome_ID</th>
-        <th>Customer_ID</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="contracts: ${contracts}">
-        <td th:text="${contracts.contract_id}"></td>
-        <td th:text="${contracts.pd_id}"></td>
-        <td th:text="${contracts.tc_id}"></td>
-        <td th:text="${contracts.motorhome_id}"></td>
-        <td th:text="${contracts.customer_id}"></td>
-
-    <td>
-        <a th:href="@{'/viewContract/'+${contracts.contract_id}}">
-            <button class ="btn-viewContract", id="btn-viewContract">View</button>
-        </a>
-        <a th:href="@{'/deleteContract/'+${contracts.contract_id}}">
-            <button class ="btn-deleteContract", id="btn-deleteContract">Delete</button>
-        </a>
-        <a th:href="@{'/updateContract/'+${contracts.contract_id}}">
-            <button class ="btn-updateContract", id="btn-updateContract">Edit</button>
-        </a>
-    </td>
-    </tr>
-    </tbody>
-</table>
+    <h1>Contract List</h1>
+    <a href="/createContract">
+        <button class ="btn-createContract" id="btn-createContract">
+            Create new Contract
+        </button>
+    </a>
+    <table>
+        <thead>
+        <tr>
+            <th>Contract_ID</th>
+            <th>PD_ID</th>
+            <th>TC_ID</th>
+            <th>Motorhome_ID</th>
+            <th>Customer_ID</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="contracts: ${contracts}">
+            <td th:text="${contracts.contract_id}">
+            <td th:text="${contracts.pd_id}">
+            <td th:text="${contracts.tc_id}">
+            <td th:text="${contracts.motorhome_id}">
+            <td th:text="${contracts.customer_id}">
+            <td>
+                <a th:href="@{'/viewContract/'+${contracts.contract_id}}">
+                    <button class ="btn-viewContract", id="btn-viewContract">
+                        View
+                    </button>
+                </a>
+                <a th:href="@{'/deleteContract/'+${contracts.contract_id}}">
+                    <button class ="btn-deleteContract", id="btn-deleteContract">
+                        Delete
+                    </button>
+                </a>
+                <a th:href="@{'/updateContract/'+${contracts.contract_id}}">
+                    <button class ="btn-updateContract", id="btn-updateContract">
+                        Edit
+                    </button>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
 </body>
 </html>
