@@ -41,4 +41,14 @@ public class TermsAndCondController {
         model.addAttribute("termsandcond", termsAndCondService.findTermsAndCondById(tc_id));
         return "home/termsandconditions/view_tc";
     }
+
+    @GetMapping("/deleteTC/{tc_id}")
+    public String deleteTC(@PathVariable("tc_id") int tc_id){
+        boolean deleted = termsAndCondService.deleteTermsAndCond(tc_id);
+        if (deleted){
+            return "redirect:/";
+        } else {
+            return "redirect:/";
+        }
+    }
 }

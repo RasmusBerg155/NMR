@@ -22,7 +22,7 @@ public class TermsAndCondRepo {
 
     public TermsAndCond addTermsAndCond(TermsAndCond t){
         String sql = "INSERT INTO terms_and_conditions(tc_id, season, rent_days, km, fuel_tank," +
-                "cancellation, notes) VALUES (?, ?, ?, ?, ?, ?)";
+                "cancellation, notes) VALUES (?, ?, ?, ?, ?, ?, ?)";
         template.update(sql, t.getTc_id(), t.getSeason(), t.getRent_days(), t.getKm(), t.getFuel_tank(),
                 t.getCancellation(), t.getNotes());
         return null;
@@ -35,8 +35,9 @@ public class TermsAndCondRepo {
         return t;
     }
 
-    public Boolean deleteTermsAndCond(int tc_id){
-        return null;
+    public boolean deleteTermsAndCond(int tc_id){
+        String sql = "DELETE FROM terms_and_conditions WHERE tc_id = ?";
+        return template.update(sql, tc_id) < 0;
     }
 
     public TermsAndCond updateTermsAndCond(int tc_id, TermsAndCond t){
