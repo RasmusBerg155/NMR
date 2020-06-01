@@ -13,6 +13,7 @@ public class TermsAndCond {
     private int km;
     private String fuel_tank;
     private String cancellation;
+    private String notes;
 
     public TermsAndCond() {
     }
@@ -63,5 +64,13 @@ public class TermsAndCond {
 
     public void setCancellation(String cancellation) {
         this.cancellation = cancellation;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
     }
 }

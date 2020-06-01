@@ -7,6 +7,11 @@
 </head>
 <body>
     <h1>Terms and Conditions:</h1>
+    <a href="/createTC">
+        <button class="btn-createTC", id="btn-createTC">
+            Create new Terms and Conditions
+        </button>
+    </a>
     <table>
         <thead>
         <tr>
@@ -16,6 +21,7 @@
             <th>Kilometers</th>
             <th>Fuel tank in %</th>
             <th>Cancellation</th>
+            <th>Notes (damages, ekstra's, etc.)</th>
         </tr>
         </thead>
         <tbody>
@@ -26,6 +32,13 @@
             <td th:text="${termsandcond.km}">
             <td th:text="${termsandcond.fuel_tank}">
             <td th:text="${termsandcond.cancellation}">
+            <td th:text="${termsandcond.notes}">
+            <td>
+                <a th:href="@{'/viewTC/'+${termsandcond.tc_id}}">
+                    <button class="btn-viewTC", id="btn-viewTC">
+                        View
+                    </button>
+                </a>
             </td>
         </tr>
         </tbody>
