@@ -1,5 +1,9 @@
 package com.demo.nmr.Controller;
-
+/*
+Imports of the Model and Service classes
+Imports for spring framework
+Import for List - java.util.list
+*/
 import com.demo.nmr.Model.Contract;
 import com.demo.nmr.Service.ContractService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,11 +16,28 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
+/*
+Controller class for Contracts
+@Controller annotation for Spring
+*/
 @Controller
 public class ContractController {
+
+    /*@
+    Autowired ContractService and creation of the object
+     */
     @Autowired
     ContractService contractService;
 
+    /*
+    @Getmapping annotation for Spring
+    Method for showing contracts:
+    - Creation of model-object
+    - Creating list containing Contract object
+    - Usage of the created contractService-object to fetchAll
+    - Mapping the model through addAttribute, named contracts, mapped with contractList
+    - Returns contract html page containing thymeleaf to show contracts
+     */
     @GetMapping("/ShowContracts")
     public String showContracts(Model model){
         List<Contract> contractList = contractService.fetchAll();
@@ -24,6 +45,9 @@ public class ContractController {
         return "home/contracts/contract";
     }
 
+    /*
+
+     */
     @GetMapping("/createContract")
     public String createContract(){
         return "home/contracts/create_contract";
@@ -63,4 +87,3 @@ public class ContractController {
         return "redirect:/";
     }
 }
-

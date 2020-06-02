@@ -3,9 +3,12 @@ package com.demo.nmr.Model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+//Annotation @Entity for spring
 @Entity
 public class TermsAndCond {
 
+    // Annotation @Id to contract_id
+    // Parameters
     @Id
     private int tc_id;
     private String season;
@@ -15,9 +18,11 @@ public class TermsAndCond {
     private String cancellation;
     private String notes;
 
+    //Default Constructor
     public TermsAndCond() {
     }
 
+    //Getters and Setters
     public int getTc_id() {
         return tc_id;
     }

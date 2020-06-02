@@ -8,23 +8,32 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+//Repository Class containing: all sql code for our crud functionality to run on our MySQL Database
+//Autowired to database through JdbcTemplate
 @Repository
 public class ContractRepo {
     @Autowired
     JdbcTemplate template;
 
+    //Method for implementing sql code
+    //usage of RowMapper interface to map rows from resultset
+    //Usage of template -> perform the query -> use sql statement -> return in rowMapper
     public List<Contract> fetchAll(){
         String sql = "SELECT * FROM contracts;";
         RowMapper<Contract> rowMapper = new BeanPropertyRowMapper<>(Contract.class);
         return template.query(sql, rowMapper);
     }
 
+    //Method for implementing sql code
+    //
     public Contract addContract(Contract co){
         String sql = "INSERT INTO contracts (contract_id, pd_id, tc_id, motorhome_id, customer_id) VALUES (?, ?, ?, ?, ?);";
         template.update(sql, co.getContract_id(),co.getPd_id(),co.getTc_id(),co.getMotorhome_id(),co.getCustomer_id());
         return null;
     }
 
+    //Method for implementing sql code
+    //usage of RowMapper interface to map rows from resultset
     public Contract findContractById(int contract_id){
         String sql = "SELECT * FROM contracts WHERE contract_id = ?";
         RowMapper<Contract> rowMapper = new BeanPropertyRowMapper<>(Contract.class);

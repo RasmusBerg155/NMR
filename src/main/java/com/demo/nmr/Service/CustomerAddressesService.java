@@ -10,9 +10,14 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+//Service Class for Customer Addresses containing:
+//Implementation of methods from CustomerAdressesRepo Class
+//It's Autowired to access the Repository objects
+
 @Service
 public class CustomerAddressesService {
     @Autowired
+    //Autowiring of the CustomerAddressesRepo Class and creation of customerAddressesRepo object
     CustomerAddressesRepo customerAddressesRepo;
 
     public List<CustomerAddresses> fetchAll() {

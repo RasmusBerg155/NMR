@@ -1,11 +1,16 @@
 package com.demo.nmr.Model;
 
+//Imports of javax for entity and id
 import javax.persistence.Entity;
 import javax.persistence.Id;
+
+//Annotation @Entity for spring
 
 @Entity
 public class Contract {
 
+    // Annotation @Id to contract_id
+    // Parameters
     @Id
     private int contract_id;
     private int pd_id;
@@ -13,10 +18,12 @@ public class Contract {
     private int motorhome_id;
     private int customer_id;
 
+    //Default Constructor
     public int getContract_id() {
         return contract_id;
     }
 
+    //Getters and Setters
     public void setContract_id(int contract_id) {
         this.contract_id = contract_id;
     }

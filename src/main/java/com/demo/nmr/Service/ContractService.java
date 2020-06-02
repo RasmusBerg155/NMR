@@ -7,8 +7,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+//Service Class for Contracts containing:
+//Implementation of methods from Contracts Repo Class
+//It's Autowired to access the Repository objects
+
 @Service
 public class ContractService {
+    //Autowiring of the ContractRepo Class and creation of contractRepo object
     @Autowired
     ContractRepo contractRepo;
 
