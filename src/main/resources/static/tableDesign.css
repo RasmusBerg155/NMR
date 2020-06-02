@@ -129,3 +129,16 @@ td{
 #btn-updateTC{
     background-color: lightsalmon;
 }
+#btn-createContract{
+    background-color: steelblue;
+    margin-bottom: 10px;
+}
+#btn-deleteContract{
+    background-color: lightsalmon;
+}
+#btn-viewContract{
+    background-color: lightsalmon;
+}
+#btn-updateContract{
+    background-color: lightsalmon;
+}

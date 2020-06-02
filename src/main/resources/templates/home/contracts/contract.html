@@ -2,17 +2,17 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="tableDesign.css">
+    <title>Contracts</title>
+    <link rel="stylesheet" href="tableDesign.css">
     <link rel="stylesheet" href="menustyles.css">
 </head>
 <body>
     <h1>Contract List</h1>
-    <a href="/createContract">
+    <div class="CenterTables"><a href="/createContract">
         <button class ="btn-createContract" id="btn-createContract">
             Create new Contract
         </button>
-    </a>
+    </a></div>
     <table>
         <thead>
         <tr>
@@ -21,6 +21,7 @@
             <th>TC_ID</th>
             <th>Motorhome_ID</th>
             <th>Customer_ID</th>
+            <th>Make Changes</th>
         </tr>
         </thead>
         <tbody>
@@ -43,7 +44,7 @@
                 </a>
                 <a th:href="@{'/updateContract/'+${contracts.contract_id}}">
                     <button class ="btn-updateContract", id="btn-updateContract">
-                        Edit
+                        Update
                     </button>
                 </a>
             </td>

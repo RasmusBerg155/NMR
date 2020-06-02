@@ -1,26 +1,29 @@
 <!DOCTYPE html>
+
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="tableDesign.css">
+    <title>Update Contract</title>
+    <link rel="stylesheet" href="formDesign.css">
     <link rel="stylesheet" href="menustyles.css">
 </head>
 <body>
-<h1>Update Customer Addresses</h1>
+<style class="UpdateMenus"></style>
+<h1>Update Contract</h1>
 
 <form action="/updateContract" method="post">
-    <div><label>Update the Contract Id:</label><br>
+    <div><label>Update the Contract ID:</label><br>
         <input type="text" name="contract_id" th:value="${contracts.contract_id}"></div>
-    <div><label>Update Pick up/Drop off Id:</label><br>
+    <div><label>Update Pick-Up/Drop-Off ID:</label><br>
         <input type="text" name="pd_id" th:value="${contracts.pd_id}"></div>
-    <div><label>Update Terms and Conditions Id:</label><br>
+    <div><label>Update Terms & Conditions ID:</label><br>
         <input type="text" name="tc_id" th:value="${contracts.tc_id}"></div>
-    <div><label>Update Motorhome Id:</label><br>
+    <div><label>Update Motorhome ID:</label><br>
         <input type="text" name="motorhome_id" th:value="${contracts.motorhome_id}"></div>
-    <div><label>Update Customer Id:</label><br>
-        <input type="text" name="customer_id" th:value="${contracts.customer_id}"></div>
-    <div><input style="background-color: steelblue" type="submit" value="Save changes"></div>
+    <div><label>Update Customer ID:</label><br>
+        <input type="text" name="customer_id" th:value="${contracts.customer_id}"></div><br>
+    <div><input style="background-color: lightsalmon" type="submit" value="Save changes"></div><br>
 </form>
 </body>
 </html>
+
