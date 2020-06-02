@@ -8,6 +8,11 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 import java.util.List;
 
+/*
+Comments for explanation of all classes are implemented in:
+Contract, ContractRepo, ContractService, ContractController, HomeController
+ */
+
 @Repository
 public class CustomerContactsRepo {
     @Autowired

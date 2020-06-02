@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Update Contract</title>
-    <link rel="stylesheet" href="formDesign.css">
-    <link rel="stylesheet" href="menustyles.css">
+    <link rel="stylesheet" href="formDesign.css" th:href="@{/formDesign.css}">
+    <link rel="stylesheet" href="menustyles.css" th:href="@{/menustyles.css}">
 </head>
 <body>
 <style class="UpdateMenus"></style>
 <h1>Update Contract</h1>
 
-<form action="/updateContract" method="post">
+<form action="/updateContract" method="post" class="UpdateMenus">
     <div><label>Update the Contract ID:</label><br>
         <input type="text" name="contract_id" th:value="${contracts.contract_id}"></div>
     <div><label>Update Pick-Up/Drop-Off ID:</label><br>

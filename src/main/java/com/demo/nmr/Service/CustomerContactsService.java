@@ -7,14 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
-//Service Class for Customer Contacts containing:
-//Implementation of methods from CustomerContactsRepo Class
-//It's Autowired to access the Repository objects
+/*
+Comments for explanation of all classes are implemented in:
+Contract, ContractRepo, ContractService, ContractController, HomeController
+ */
 
 @Service
 public class CustomerContactsService {
 
-    //Autowiring of the CustomerContactsRepo Class and creation of customerContactsRep object
     @Autowired
     CustomerContactsRepo customerContactsRepo;
 

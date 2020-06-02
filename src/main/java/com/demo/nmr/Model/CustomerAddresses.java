@@ -3,12 +3,15 @@ package com.demo.nmr.Model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-//Annotation @Entity for spring
+/*
+Comments for explanation of all classes are implemented in:
+Contract, ContractRepo, ContractService, ContractController, HomeController
+ */
+
 @Entity
 public class CustomerAddresses {
 
-    // Annotation @Id to contract_id
-    // Parameters
+
     @Id
     private int address_id;
     private String street_name;
@@ -17,11 +20,11 @@ public class CustomerAddresses {
     private String country;
     private int zip;
 
-    //Default Constructor
+
     public CustomerAddresses() {
     }
 
-    //Getters and Setters
+
     public int getAddress_id() {
         return address_id;
     }

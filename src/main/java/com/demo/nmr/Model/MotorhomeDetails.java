@@ -3,12 +3,14 @@ package com.demo.nmr.Model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-//Annotation @Entity for spring
+/*
+Comments for explanation of all classes are implemented in:
+Contract, ContractRepo, ContractService, ContractController, HomeController
+ */
+
 @Entity
 public class MotorhomeDetails {
 
-    // Annotation @Id to contract_id
-    // Parameters
     @Id
     private int motorhome_detail_id;
     private double km;
@@ -16,11 +18,9 @@ public class MotorhomeDetails {
     private String price_per_day;
     private String extra;
 
-    //Default Constructor
     public MotorhomeDetails() {
     }
 
-    //Getters and Setters
     public int getMotorhome_detail_id() {
         return motorhome_detail_id;
     }

@@ -8,15 +8,14 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-
-//Service Class for MotorhomeDetails containing:
-//Implementation of methods from MotorhomeDetailsRepo Class
-//It's Autowired to access the Repository objects
+/*
+Comments for explanation of all classes are implemented in:
+Contract, ContractRepo, ContractService, ContractController, HomeController
+ */
 
 @Service
 public class PickUpDropOffService {
 
-    //Autowiring of the PickUpDropOffRepo Class and creation of pickUpDropOffRepo object
     @Autowired
     PickUpDropOffRepo pickUpDropOffRepo;
 

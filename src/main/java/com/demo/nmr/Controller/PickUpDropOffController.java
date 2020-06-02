@@ -13,6 +13,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
+/*
+Comments for explanation of all classes are implemented in:
+Contract, ContractRepo, ContractService, ContractController, HomeController
+ */
+
 @Controller
 public class PickUpDropOffController {
 
@@ -34,7 +39,7 @@ public class PickUpDropOffController {
     @PostMapping("/createDP")
     public String createDP(@ModelAttribute PickUpDropOff pickUpDropOff){
         pickUpDropOffService.addPickUpDropOff(pickUpDropOff);
-        return "redirect:/";
+        return "redirect:/ShowPickUpDropOff";
     }
 
     @GetMapping("/viewPD/{pd_id}")
@@ -47,9 +52,9 @@ public class PickUpDropOffController {
     public String delete(@PathVariable("pd_id") int pd_id){
         boolean deleted = pickUpDropOffService.deletePickUpDropOff(pd_id);
         if (deleted) {
-            return "redirect:/";
+            return "redirect:/ShowPickUpDropOff";
         } else {
-            return "redirect:/";
+            return "redirect:/ShowPickUpDropOff";
         }
     }
 
@@ -62,6 +67,6 @@ public class PickUpDropOffController {
     @PostMapping("/updatePD")
     public String updatePickUpDropOff(@ModelAttribute PickUpDropOff pickUpDropOff){
         pickUpDropOffService.updatePickUpDropOff(pickUpDropOff.getPd_id(), pickUpDropOff);
-        return "redirect:/";
+        return "redirect:/ShowPickUpDropOff";
     }
 }

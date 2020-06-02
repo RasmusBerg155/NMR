@@ -2,23 +2,23 @@ package com.demo.nmr.Model;
 
 import javax.persistence.*;
 
-//Annotation @Entity for spring
+/*
+Comments for explanation of all classes are implemented in:
+Contract, ContractRepo, ContractService, ContractController, HomeController
+ */
+
 @Entity
 public class Motorhome {
 
-    // Annotation @Id to contract_id
-    // Parameters
     @Id
     private int motorhome_id;
     private String brand;
     private String model;
     private int motorhome_detail_id;
 
-    //Default Constructor
     public Motorhome() {
     }
 
-    //Getters and Setters
     public int getMotorhome_id() {
         return motorhome_id;
     }

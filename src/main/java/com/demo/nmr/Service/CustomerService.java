@@ -8,15 +8,14 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-
-//Service Class for Customer containing:
-//Implementation of methods from CustomerRepo Class
-//It's Autowired to access the Repository objects
+/*
+Comments for explanation of all classes are implemented in:
+Contract, ContractRepo, ContractService, ContractController, HomeController
+ */
 
 @Service
 public class CustomerService {
 
-    //Autowiring of the CustomerRepo Class and creation of customerRepo object
     @Autowired
     CustomerRepo customerRepo;
 

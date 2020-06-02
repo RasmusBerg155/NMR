@@ -14,6 +14,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
+/*
+Comments for explanation of all classes are implemented in:
+Contract, ContractRepo, ContractService, ContractController, HomeController
+ */
+
 @Controller
 public class MotorhomeController {
     @Autowired
@@ -38,7 +43,7 @@ public class MotorhomeController {
     @PostMapping("/createMH")
     public String createMH(@ModelAttribute Motorhome motorhome){
         motorhomeService.addMotorhome(motorhome);
-        return "redirect:/";
+        return "redirect:/ShowMotorhomes";
     }
 
     @GetMapping("/viewMH/{motorhome_id}")
@@ -51,9 +56,9 @@ public class MotorhomeController {
     public String deleteMH(@PathVariable("motorhome_id")int motorhome_id) {
         boolean deleted = motorhomeService.deleteMotorhome(motorhome_id);
         if(deleted) {
-            return "redirect:/";
+            return "redirect:/ShowMotorhomes";
         } else {
-            return "redirect:/";
+            return "redirect:/ShowMotorhomes";
         }
     }
 
@@ -66,6 +71,6 @@ public class MotorhomeController {
     @PostMapping("/updateMH")
     public String updateMH(@ModelAttribute Motorhome motorhome){
         motorhomeService.updateMotorhome(motorhome.getMotorhome_id(), motorhome);
-        return "redirect:/";
+        return "redirect:/ShowMotorhomes";
     }
 }

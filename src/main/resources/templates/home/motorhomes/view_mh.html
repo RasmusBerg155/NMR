@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="tableDesign.css">
-    <link rel="stylesheet" href="menustyles.css">
+    <link rel="stylesheet" type="text/css" href="tableDesign.css" th:href="@{/menustyles.css}">
+    <link rel="stylesheet" href="menustyles.css" th:href="@{/menustyles.css}">
 </head>
 <body>
     <h1>Motorhome details</h1>
+
 
     <span th:text="${motorhomes.motorhome_id}"/></span>
     <span th:text="${motorhomes.brand}"/></span>
     <span th:text="${motorhomes.model}"/></span>
     <span th:text="${motorhomes.motorhome_detail_id}"/></span>
-
 </body>
 </html>

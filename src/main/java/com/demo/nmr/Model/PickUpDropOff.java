@@ -3,12 +3,14 @@ package com.demo.nmr.Model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-//Annotation @Entity for spring
+/*
+Comments for explanation of all classes are implemented in:
+Contract, ContractRepo, ContractService, ContractController, HomeController
+ */
+
 @Entity
 public class PickUpDropOff {
 
-    // Annotation @Id to contract_id
-    // Parameters
     @Id
     private int pd_id;
     private String pick_up_location;
@@ -16,11 +18,9 @@ public class PickUpDropOff {
     private String drop_off_location;
     private double drop_off_distance;
 
-    //Default Constructor
     public PickUpDropOff() {
     }
 
-    //Getters and Setters
     public int getPd_id() {
         return pd_id;
     }

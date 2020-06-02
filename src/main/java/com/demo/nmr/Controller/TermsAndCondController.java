@@ -12,6 +12,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
+/*
+Comments for explanation of all classes are implemented in:
+Contract, ContractRepo, ContractService, ContractController, HomeController
+ */
+
 @Controller
 public class TermsAndCondController {
 
@@ -33,7 +38,7 @@ public class TermsAndCondController {
     @PostMapping("/createTC")
     public String createTC(@ModelAttribute TermsAndCond termsAndCond){
         termsAndCondService.addTermsAndCond(termsAndCond);
-        return "redirect:/";
+        return "redirect:/ShowTermsAndCond";
     }
 
     @GetMapping("/viewTC/{tc_id}")
@@ -46,9 +51,9 @@ public class TermsAndCondController {
     public String deleteTC(@PathVariable("tc_id") int tc_id){
         boolean deleted = termsAndCondService.deleteTermsAndCond(tc_id);
         if (deleted){
-            return "redirect:/";
+            return "redirect:/ShowTermsAndCond";
         } else {
-            return "redirect:/";
+            return "redirect:/ShowTermsAndCond";
         }
     }
 
@@ -61,6 +66,6 @@ public class TermsAndCondController {
     @PostMapping("updateTC")
     public String updateTermsandCond(@ModelAttribute TermsAndCond termsAndCond){
         termsAndCondService.updateTermsAndCond(termsAndCond.getTc_id(), termsAndCond);
-        return "redirect:/";
+        return "redirect:/ShowTermsAndCond";
     }
 }

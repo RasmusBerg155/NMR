@@ -12,6 +12,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
+/*
+Comments for explanation of all classes are implemented in:
+Contract, ContractRepo, ContractService, ContractController, HomeController
+ */
+
 @Controller
 public class CustomerController {
     @Autowired
@@ -32,7 +37,7 @@ public class CustomerController {
     @PostMapping("/createCustomer")
     public String createCustomer(@ModelAttribute Customer customer){
         customerService.addCustomer(customer);
-        return "redirect:/";
+        return "redirect:/ShowCustomer";
     }
 
     @GetMapping("/viewCustomer/{customer_id}")
@@ -45,9 +50,9 @@ public class CustomerController {
     public String deleteCustomer(@PathVariable("customer_id")int customer_id) {
         boolean delete = customerService.deleteCustomer(customer_id);
         if(delete) {
-            return "redirect:/";
+            return "redirect:/ShowCustomer";
         } else {
-            return "redirect:/";
+            return "redirect:/ShowCustomer";
         }
     }
 
@@ -60,6 +65,6 @@ public class CustomerController {
     @PostMapping("/updateCustomer")
     public String updateCustomer(@ModelAttribute Customer customer){
         customerService.updateCustomer(customer.getCustomer_id(), customer);
-        return "redirect:/";
+        return "redirect:/ShowCustomer";
     }
 }

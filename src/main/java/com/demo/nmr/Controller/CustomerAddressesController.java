@@ -12,6 +12,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
+/*
+Comments for explanation of all classes are implemented in:
+Contract, ContractRepo, ContractService, ContractController, HomeController
+ */
+
 @Controller
 public class CustomerAddressesController {
   @Autowired
@@ -32,7 +37,7 @@ public class CustomerAddressesController {
     @PostMapping("/CreateCustomerAddresses")
     public String createCustomerAddresses(@ModelAttribute CustomerAddresses customerAddresses){
         customerAddressesService.addCustomerAddresses(customerAddresses);
-        return "redirect:/";
+        return "redirect:/ShowCustomerAddresses";
     }
 
     @GetMapping("/ViewOneCustomerAddresses/{address_id}")

@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Update Motorhome</title>
-    <link rel="stylesheet" href="formDesign.css">
-    <link rel="stylesheet" href="menustyles.css">
+    <link rel="stylesheet" href="formDesign.css" th:href="@{/formDesign.css}">
+    <link rel="stylesheet" href="menustyles.css" th:href="@{/menustyles.css}">
 </head>
-<body style="background-image: url('LakeRV.jpg'); background-position: top; background-repeat: initial; background-size: 100%;">
+<body>
     <h1>Update Motorhome</h1>
     <form action="/updateMH" method="post">
         <div><label>Update ID:</label><br>
