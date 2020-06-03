@@ -27,21 +27,21 @@ public class CustomerAddressesRepo {
     }
 
     public CustomerAddresses addCustomerAddresses(CustomerAddresses c) {
-        String sql = "INSERT INTO customer_addresses (address_id, street_name, street_no, city, country, zip) VALUES (?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO customer_addresses (address_id, street_name, street_no, city, country, zip) VALUES (?, ?, ?, ?, ?, ?);";
         template.update(sql, c.getAddress_id(), c.getStreet_name(), c.getStreet_no(), c.getCity(), c.getCountry(), c.getZip());
         return null;
     }
 
 
     public CustomerAddresses findCustomerAddressesById(int address_id) {
-        String sql = "SELECT * FROM customer_addresses WHERE address_id = ?";
+        String sql = "SELECT * FROM customer_addresses WHERE address_id = ?;";
         RowMapper<CustomerAddresses> rowMapper = new BeanPropertyRowMapper<>(CustomerAddresses.class);
         CustomerAddresses c = template.queryForObject(sql, rowMapper, address_id);
         return c;
     }
 
     public boolean deleteCustomerAddresses(int address_id) {
-        String sql = "DELETE FROM customer_addresses WHERE address_id = ?";
+        String sql = "DELETE FROM customer_addresses WHERE address_id = ?;";
         return template.update(sql, address_id) < 0;
     }
 

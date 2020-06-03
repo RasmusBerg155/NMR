@@ -45,8 +45,8 @@ public class CustomerRepo {
     }
 
     public Customer updateCustomer(int customer_id, Customer c){
-        String sql ="UPDATE customers SET customer_id = ?, first_name = ?, last_name = ?, contact_id = ?, address_id = ? WHERE cusotmer_id = ?";
-        template.update(sql, c.getCustomer_id(), c.getFirst_name(), c.getLast_name(), c.getContact_id(), c.getAddress_id());
+        String sql ="UPDATE customers SET customer_id = ?, first_name = ?, last_name = ?, contact_id = ?, address_id = ? WHERE customer_id = ?";
+        template.update(sql, c.getCustomer_id(), c.getFirst_name(), c.getLast_name(), c.getContact_id(), c.getAddress_id(), c.getCustomer_id());
         return null;
     }
 }

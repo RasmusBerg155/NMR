@@ -5,6 +5,7 @@ Imports for spring framework
 Import for List - java.util.list
 */
 import com.demo.nmr.Model.Contract;
+import com.demo.nmr.Model.CustomerAddresses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -42,10 +43,9 @@ public class ContractRepo {
      */
     public Contract addContract(Contract co){
         String sql = "INSERT INTO contracts (contract_id, pd_id, tc_id, motorhome_id, customer_id) VALUES (?, ?, ?, ?, ?);";
-        template.update(sql, co.getContract_id(),co.getPd_id(),co.getTc_id(),co.getMotorhome_id(),co.getCustomer_id());
+        template.update(sql, co.getContract_id(), co.getPd_id(), co.getTc_id(), co.getMotorhome_id(), co.getCustomer_id());
         return null;
     }
-
     /*
     Method for Find Contract By Id:
     - String = "sql code" -> selecting a table from contracts with the specidfic contract_id
@@ -80,8 +80,8 @@ public class ContractRepo {
     - Returns null
      */
     public Contract updateContract(int contract_id, Contract co){
-        String sql ="UPDATE contracts SET contract_id = ?, pd_id = ?, tc_id = ?, motorhome_id = ?, customer_id WHERE contract_id = ?";
-        template.update(sql, co.getContract_id(),co.getPd_id(),co.getTc_id(),co.getMotorhome_id(),co.getCustomer_id());
+        String sql ="UPDATE contracts SET contract_id = ?, pd_id = ?, tc_id = ?, motorhome_id = ?, customer_id = ? WHERE contract_id = ?;";
+        template.update(sql, co.getContract_id(),co.getPd_id(),co.getTc_id(),co.getMotorhome_id(),co.getCustomer_id(), co.getContract_id());
         return null;
     }
 }

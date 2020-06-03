@@ -38,7 +38,7 @@ public class ContractController {
     - Mapping the model through addAttribute, named contracts, mapped with contractList
     - Returns contract html page containing thymeleaf to show contracts
      */
-    @GetMapping("/ShowContracts")
+    @GetMapping("/showContracts")
     public String showContracts(Model model){
         List<Contract> contractList = contractService.fetchAll();
         model.addAttribute("contracts", contractList);
@@ -65,7 +65,7 @@ public class ContractController {
     @PostMapping("/createContract")
     public String createContract(@ModelAttribute Contract contract){
         contractService.addContract(contract);
-        return "redirect:/ShowContracts";
+        return "redirect:/showContracts";
     }
 
     /*
@@ -99,9 +99,9 @@ public class ContractController {
     public String deleteContract(@PathVariable("contract_id")int contract_id) {
         boolean delete = contractService.deleteContract(contract_id);
         if(delete) {
-            return "redirect:/ShowContracts";
+            return "redirect:/showContracts";
         } else {
-            return "redirect:/ShowContracts";
+            return "redirect:/showContracts";
         }
     }
 
@@ -131,6 +131,6 @@ public class ContractController {
     @PostMapping("/updateContract")
     public String updateContract(@ModelAttribute Contract contract){
         contractService.updateContract(contract.getContract_id(), contract);
-        return "redirect:/ShowContracts";
+        return "redirect:/showContracts";
     }
 }
