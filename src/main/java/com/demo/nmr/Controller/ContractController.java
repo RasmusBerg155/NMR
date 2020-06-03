@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import java.util.List;
 
 /*
-----Made By Lara Čulič, Rasmus Berg ----
+---- Made By Lara Čulič, Rasmus Berg ----
 
 Controller class for Contracts
 @Controller annotation for Spring

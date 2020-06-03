@@ -34,7 +34,7 @@ public class MotorhomeController {
     }
 
     @GetMapping("/createMH")
-    public String createMH(Model model){
+    public String createMH(){
          return "home/motorhomes/create_mh";
     }
 
