@@ -9,6 +9,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /*
+----Made By Lara Čulič ----
+
 Comments for explanation of all classes are implemented in:
 Contract, ContractRepo, ContractService, ContractController, HomeController
  */

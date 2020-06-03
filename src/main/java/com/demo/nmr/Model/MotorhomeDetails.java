@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /*
+---- Made By Alexandru Gabriel Panait ----
+
 Comments for explanation of all classes are implemented in:
 Contract, ContractRepo, ContractService, ContractController, HomeController
  */

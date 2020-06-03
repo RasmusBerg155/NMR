@@ -5,7 +5,6 @@ Imports for spring framework
 Import for List - java.util.list
 */
 import com.demo.nmr.Model.Contract;
-import com.demo.nmr.Model.CustomerAddresses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -14,6 +13,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /*
+----Made By Lara Čulič, Rasmus Berg ----
+
 Repository Class containing: all sql code for our crud functionality to run on our MySQL Database
 Autowired to database through JdbcTemplate
 */

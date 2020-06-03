@@ -9,10 +9,11 @@ import com.demo.nmr.Model.Contract;
 import com.demo.nmr.Repository.ContractRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 /*
+----Made By Lara Čulič, Rasmus Berg ----
+
 Service Class for Contracts containing:
 Implementation of methods from Contracts Repo Class
 It's Autowired to access the Repository objects

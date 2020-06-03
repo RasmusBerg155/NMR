@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /*
+---- Made By Rasmus Marco Berg ----
+
 Comments for explanation of all classes are implemented in:
 Contract, ContractRepo, ContractService, ContractController, HomeController
  */
@@ -25,7 +27,6 @@ public class TermsAndCondService {
     public TermsAndCond addTermsAndCond(TermsAndCond t){
         return termsAndCondRepo.addTermsAndCond(t);
     }
-
 
     public TermsAndCond findTermsAndCondById(int tc_id){
         return termsAndCondRepo.findTermsAndCondById(tc_id);

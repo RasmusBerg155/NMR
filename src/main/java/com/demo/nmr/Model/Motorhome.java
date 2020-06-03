@@ -3,6 +3,8 @@ package com.demo.nmr.Model;
 import javax.persistence.*;
 
 /*
+---- Made By Alin Cristian Bejinariu, Rasmus Marco Berg ----
+
 Comments for explanation of all classes are implemented in:
 Contract, ContractRepo, ContractService, ContractController, HomeController
  */

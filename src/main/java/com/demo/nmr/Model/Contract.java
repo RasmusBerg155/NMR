@@ -1,16 +1,24 @@
 package com.demo.nmr.Model;
 
-//Imports of javax for entity and id
+/*
+Imports of javax for Entity and Id
+ */
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-//Annotation @Entity for spring
+/*
+----Made By Lara Čulič, Rasmus Berg ----
+
+Annotation @Entity for spring
+ */
 
 @Entity
 public class Contract {
 
-    // Annotation @Id to contract_id
-    // Parameters
+    /*
+    Annotation @Id to contract_id
+    Parameters
+    */
     @Id
     private int contract_id;
     private int pd_id;

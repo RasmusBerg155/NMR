@@ -1,6 +1,5 @@
 package com.demo.nmr.Service;
 
-import com.demo.nmr.Model.Motorhome;
 import com.demo.nmr.Model.MotorhomeDetails;
 import com.demo.nmr.Repository.MotorhomeDetailsRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +8,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /*
+---- Made By Alexandru Gabriel Panait ----
+
 Comments for explanation of all classes are implemented in:
 Contract, ContractRepo, ContractService, ContractController, HomeController
  */

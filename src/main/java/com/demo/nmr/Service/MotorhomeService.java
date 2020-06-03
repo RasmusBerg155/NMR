@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /*
+---- Made By Alin Cristian Bejinariu, Rasmus Marco Berg ----
+
 Comments for explanation of all classes are implemented in:
 Contract, ContractRepo, ContractService, ContractController, HomeController
  */

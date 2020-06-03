@@ -11,5 +11,4 @@ public class NMRApplication {
     public static void main(String[] args) {
         SpringApplication.run(NMRApplication.class, args);
     }
-
 }

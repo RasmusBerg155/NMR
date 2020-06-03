@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import java.util.List;
 
 /*
+---- Made By Alin Cristian Bejinariu, Rasmus Marco Berg ----
+
 Comments for explanation of all classes are implemented in:
 Contract, ContractRepo, ContractService, ContractController, HomeController
  */
@@ -23,8 +25,6 @@ Contract, ContractRepo, ContractService, ContractController, HomeController
 public class MotorhomeController {
     @Autowired
     MotorhomeService motorhomeService;
-    @Autowired
-    MotorhomeDetailsService motorhomeDetailsService;
 
     @GetMapping("/ShowMotorhomes")
     public String showMotorhomes(Model model){
@@ -35,8 +35,6 @@ public class MotorhomeController {
 
     @GetMapping("/createMH")
     public String createMH(Model model){
-        List<MotorhomeDetails> motorhomeDetailsList = motorhomeDetailsService.fetchAll();
-        model.addAttribute("motorhomedetails", motorhomeDetailsList);
          return "home/motorhomes/create_mh";
     }
 
