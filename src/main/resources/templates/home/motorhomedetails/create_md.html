@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Create Motorhome Detail</title>
-    <link rel="stylesheet" href="formDesign.css">
-    <link rel="stylesheet" href="menustyles.css">
+    <link rel="stylesheet" href="menustyles.css" th:href="@{/menustyles.css}">
 </head>
 <body>
      <h1>Create new Motorhome Details</h1>
-     <form class="CreationMenus" action="/CreateMotorhomeDetails" method="post">
+     <form action="/CreateMotorhomeDetails" method="post">
           <div><label>Enter Motorhome Detail ID:</label><br>
           <input type="text" name="motorhome_detail_id" placeholder="- nothing added -" style="text-align: center"></div>
           <div><label>Enter Kilometers:</label><br>

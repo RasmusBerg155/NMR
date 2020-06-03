@@ -1,8 +1,11 @@
-/* IN THIS CLASS ARE THE DESIGNS FOR THE BACKGROUNDS AND MAIN PAGE GUI */
+/* IN THIS CSS FILE ARE ALL THE METHODS RESPONSIBLE FOR THE DESIGN OF THE WEBSITE */
 
+/* THIS METHOD MEANS THAT WE APPLY THE TEXT STYLE BAHNSCHRIFT ON ALL THE PAGES LINKED TO THIS CSS FILE */
 * {
     font-family: Bahnschrift;
 }
+
+/* WE ARE USING AN H1 HEADER ON ALL OUR PAGES AND THIS IS THE METHOD FOR IT */
 h1{
     position: center;
     alignment: center;
@@ -14,6 +17,7 @@ h1{
     margin-right: 25%;
 }
 
+/* THIS METHOD IS USED INSIDE THE INDEX HTML FILE AND IF AFFECTS THE ARRANGEMENT OF THE 'VIEW TABLE' BUTTONS MENU*/
 .pagePreview{
     position: center;
     alignment: center;
@@ -26,6 +30,7 @@ h1{
     margin-top: 10%;
 }
 
+/* THIS IS THE METHOD WHICH APPLIES THE BACKGROUND FOR ALL THE PAGES OF THE SITE */
 body{
     background-image: url("LakeRV.jpg");
     background-position: top;
@@ -36,8 +41,19 @@ body{
     background-color: black;
 }
 
-/* BELOW HERE ARE THE FRONT PAGE BUTTONS' DESIGNS */
+/* THE FORMS ARE USED IN THE UPDATE AND CREATE METHODS AND THEIR DESIGN IS AFFECTED ONLY BY THIS BLOCK */
+form{
+    position: center;
+    alignment: center;
+    text-align: center;
+    background-color: lightsteelblue!important;
+    margin-left: 41% !important;
+    margin-right: 41% !important;
+    margin-top: 10% !important;
+    opacity:85%;
+}
 
+/* BELOW HERE ARE THE FRONT PAGE BUTTONS' DESIGNS - THESE BUTTONS ARE LOCATED INSIDE THE INDEX HTML FILE */
 #btn-showMotorhomes{
     background-color: steelblue;
     margin-bottom: 10px;
@@ -51,10 +67,6 @@ body{
     margin-bottom: 10px;
 }
 #btn-showCustomerContacts{
-    background-color: steelblue;
-    margin-bottom: 10px;
-}
-#btn-showCustomers{
     background-color: steelblue;
     margin-bottom: 10px;
 }
@@ -74,3 +86,182 @@ body{
     background-color: steelblue;
     margin-bottom: 10px;
 }
+
+/* HERE ARE THE METHODS FOR THE DESIGN OF ALL TABLES */
+/* THIS IS AFFECTING ALL THE TABLES */
+table{
+    border-collapse: collapse;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.CenterTables{
+    position: center;
+    alignment: center;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    margin-left: 25%;
+    margin-right: 25%;
+
+}
+.ViewTables{
+    border-collapse: collapse!important;
+    width: max-content!important;
+    position: center!important;
+    alignment: center!important;
+    text-align: center!important;
+    align-content: center!important;
+    align-items: center!important;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    margin-top: 15%!important;
+}
+
+/* THIS IS AFFECTING THE TABLE HEAD - WHERE THE COLUMN TITLE IS LOCATED */
+th{
+    background-color: steelblue;
+    border: 1px solid black;
+    text-align: center;
+    padding: 2px;
+}
+
+/* THIS IS AFFECTING THE TABLE DETAILS - ALL THE CONTENT CELLS */
+td{
+    background-color: lightsteelblue;
+    border: 1px solid black;
+    text-align: center;
+    padding: 2px;
+}
+
+/* THESE ARE THE METHODS FOR ALL THE REST OF THE BUTTONS - AND HOLY SHIT THERE ARE A LOT OF BUTTONS */
+.btn{
+    border: none;
+    color: steelblue;
+    padding: 10px 10px;
+    text-align: center;
+}
+.btn:hover{
+    box-shadow: 5px 5px 5px steelblue;
+}
+#btn-createMH{
+    background-color: steelblue;
+    margin-bottom: 10px;
+}
+#btn-viewMH{
+    background-color: lightsalmon;
+}
+#btn-deleteMH{
+    background-color: lightsalmon;
+}
+#btn-updateMH{
+    background-color: lightsalmon;
+}
+#btn-createMotorhomeDetails{
+    background-color: steelblue;
+    margin-bottom: 10px;
+}
+#btn-viewOneMotorhomeDetail{
+    background-color: lightsalmon;
+}
+#btn-deleteMotorhomeDetails{
+    background-color: lightsalmon;
+}
+#btn-updateMotorhomeDetails{
+    background-color: lightsalmon;
+}
+#btn-createDP{
+    background-color: steelblue;
+    margin-bottom: 10px;
+}
+#btn-viewPD{
+    background-color: lightsalmon;
+}
+#btn-deletePD{
+    background-color: lightsalmon;
+}
+#btn-updatePD{
+    background-color: lightsalmon;
+}
+#btn-createCustomerAddresses{
+    background-color: steelblue;
+    margin-bottom: 10px;
+}
+#btn-viewOneCustomerAddresses{
+    background-color: lightsalmon;
+}
+#btn-deleteCustomerAddresses{
+    background-color: lightsalmon;
+}
+#btn-updateCustomerAddresses{
+    background-color: lightsalmon;
+}
+#btn-createCustomer
+{
+    background-color: steelblue;
+    margin-bottom: 10px;
+}
+#btn-viewCustomer{
+    background-color: lightsalmon;
+}
+#btn-deleteCustomer{
+    background-color: lightsalmon;
+}
+#btn-updateCustomer{
+    background-color: lightsalmon;
+}
+#btn-createCustomerContacts{
+    background-color: steelblue;
+    margin-bottom: 10px;
+}
+#btn-view_ct{
+    background-color: lightsalmon;
+}
+#btn-delete_ct{
+    background-color: lightsalmon;
+}
+#btn-update_ct{
+    background-color: lightsalmon;
+}
+#btn-createTC{
+    background-color: steelblue;
+    margin-bottom: 10px;
+}
+#btn-viewTC{
+    background-color: lightsalmon;
+}
+#btn-deleteTC{
+    background-color: lightsalmon;
+}
+#btn-updateTC{
+    background-color: lightsalmon;
+}
+#btn-createContract{
+    background-color: steelblue;
+    margin-bottom: 10px;
+}
+#btn-deleteContract{
+    background-color: lightsalmon;
+}
+#btn-viewContract{
+    background-color: lightsalmon;
+}
+#btn-updateContract{
+    background-color: lightsalmon;
+}
+/* AS I SAID, A LOT OF BUTTONS */
+
+/* DEV Notes:
+
+Alexandru Gabriel Panait: I've finished editing this CSS file at 4:01 AM. I've drank 4 coca-cola cans until now.
+If you have read all tha way down here, then I appreciate you and here is a joke for you:
+"What is the longest word in English? 'Smiles'. Because there is a mile between the first and last letter."
+
+For my teachers:
+-> thank you Cay for the very good GUI & SPRING videos;
+-> thank you Douglas for all the funny classes;
+-> thank you Arturo for the inspiration and career guidance;
+-> thank you Marianne for all the valuable insight of the IT management world;
+-> thank you Faisal for not failing me in the 1st semester and giving me a 2nd chance. I've made a comeback!
+If you would be still teaching at KEA, you would be proud of me.
+*/

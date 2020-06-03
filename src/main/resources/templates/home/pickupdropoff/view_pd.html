@@ -3,16 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="tableDesign.css">
-    <link rel="stylesheet" href="menustyles.css">
+    <link rel="stylesheet" href="menustyles.css" th:href="@{/menustyles.css}">
 </head>
 <body>
     <h1>Pick-off and drop-off details:</h1>
-
-    <span th:text="${pickupdropoff.pd_id}"></span>
-    <span th:text="${pickupdropoff.pick_up_location}"></span>
-    <span th:text="${pickupdropoff.pick_up_distance}"></span>
-    <span th:text="${pickupdropoff.drop_off_location}"></span>
-    <span th:text="${pickupdropoff.drop_off_distance}"></span>
+    <table class="ViewTables">
+        <thead>
+        <tr>
+            <th>Pick-off and drop-off Id</th>
+            <th>Pick-up location</th>
+            <th>Pick-up distance</th>
+            <th>Drop-off location</th>
+            <th>Drop-off distance</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="pickupdropoff: ${pickupdropoff}">
+            <td th:text="${pickupdropoff.pd_id}">
+            <td th:text="${pickupdropoff.pick_up_location}">
+            <td th:text="${pickupdropoff.pick_up_distance}">
+            <td th:text="${pickupdropoff.drop_off_location}">
+            <td th:text="${pickupdropoff.drop_off_distance}"></td></tr></tbody></table>
 </body>
 </html>

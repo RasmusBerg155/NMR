@@ -1,17 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Create Pick-up & Drop-off</title>
-    <link rel="stylesheet" href="formDesign.css">
-    <link rel="stylesheet" href="menustyles.css">
+    <link rel="stylesheet" href="menustyles.css" th:href="@{/menustyles.css}">
 </head>
 <body>
-    <h1>
-        Create new Pick-off and Drop-off
-    </h1>
-
-    <form class="CreationMenus" action="/createDP" method="post">
+    <h1>Create new Pick-off and Drop-off</h1>
+    <form action="/createDP" method="post">
         <div><label>Enter new Pick-up/Drop-off ID:</label><br>
         <input type="text" name="pd_id" placeholder="- nothing added -" style="text-align: center"></div>
         <div><label>Enter Pick-up Location:</label><br>

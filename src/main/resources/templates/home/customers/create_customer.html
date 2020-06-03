@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Create Customer</title>
-    <link rel="stylesheet" href="formDesign.css">
-    <link rel="stylesheet" href="menustyles.css">
+    <link rel="stylesheet" href="menustyles.css" th:href="@{/menustyles.css}">
 </head>
 <body>
         <h1>Create new Customer</h1>
-        <form class="CreationMenus" action="/createCustomer" method="post">
+        <form action="/createCustomer" method="post">
         <div><label>Enter Customer ID:</label><br>
         <input type="text" name="customer_id" placeholder="- nothing added -" style="text-align: center"></div>
         <div><label>Enter First Name:</label><br>

@@ -1,16 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="tableDesign.css">
-    <link rel="stylesheet" href="menustyles.css">
+    <link rel="stylesheet" href="menustyles.css" th:href="@{/menustyles.css}">
 </head>
 <body>
 <h1>Customer Contacts</h1>
-<span th:text="${customercontacts.contact_id}"/>
-<span th:text="${customercontacts.e_mail}"/>
-<span th:text="${customercontacts.phone}"/>
+<table class="ViewTables">
+    <thead>
+    <tr>
+        <th>Contact ID</th>
+        <th>E_mail</th>
+        <th>Phone Number</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="customercontacts: ${customercontacts}">
+        <td th:text="${customercontacts.contact_id}"></td>
+        <td th:text="${customercontacts.e_mail}"></td>
+        <td th:text="${customercontacts.phone}"></td></tr></tbody></table>
 </body>
 </html>

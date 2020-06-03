@@ -3,19 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="tableDesign.css">
-    <link rel="stylesheet" href="menustyles.css">
+    <link rel="stylesheet" href="menustyles.css" th:href="@{/menustyles.css}">
 </head>
 <body>
     <h1>Terms and conditions details</h1>
-
-    <span th:text="${termsandcond.tc_id}"></span>
-    <span th:text="${termsandcond.season}"></span>
-    <span th:text="${termsandcond.rent_days}"></span>
-    <span th:text="${termsandcond.km}"></span>
-    <span th:text="${termsandcond.fuel_tank}"></span>
-    <span th:text="${termsandcond.cancellation}"></span>
-    <span th:text="${termsandcond.notes}"></span>
-
+    <table class="ViewTables">
+        <thead>
+        <tr>
+            <th>Terms and Conditions Id</th>
+            <th>Season (High/Mid/Low)</th>
+            <th>Total rent days</th>
+            <th>Kilometers</th>
+            <th>Fuel tank in %</th>
+            <th>Cancellation</th>
+            <th>Notes (damages, ekstra's, etc.)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="termsandcond: ${termsandcond}">
+            <td th:text="${termsandcond.tc_id}"></td>
+            <td th:text="${termsandcond.season}"></td>
+            <td th:text="${termsandcond.rent_days}"></td>
+            <td th:text="${termsandcond.km}"></td>
+            <td th:text="${termsandcond.fuel_tank}"></td>
+            <td th:text="${termsandcond.cancellation}"></td>
+            <td th:text="${termsandcond.notes}"></td></tr></tbody></table>
 </body>
 </html>

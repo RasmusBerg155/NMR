@@ -3,18 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Contract Details</title>
-    <link rel="stylesheet" href="formDesign.css" th:href="@{/formDesign.css}">
     <link rel="stylesheet" href="menustyles.css" th:href="@{/menustyles.css}">
 </head>
 <body>
+<h1>Contract Details</h1>
+<table class="ViewTables">
+    <thead>
+    <tr>
+        <th>Contract_ID</th>
+        <th>PD_ID</th>
+        <th>TC_ID</th>
+        <th>Motorhome_ID</th>
+        <th>Customer_ID</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="contracts: ${contracts}">
+        <td th:text="${contracts.contract_id}"></td>
+        <td th:text="${contracts.pd_id}"></td>
+        <td th:text="${contracts.tc_id}"></td>
+        <td th:text="${contracts.motorhome_id}"></td>
+        <td th:text="${contracts.customer_id}"></td></tr></tbody></table>
 
-        <h1>Contract Details</h1>
 
-        <span th:text="${contracts.contract_id}"/></span>
-        <span th:text="${contracts.pd_id}"/></span>
-        <span th:text="${contracts.tc_id}"/></span>
-        <span th:text="${contracts.motorhome_id}"/></span>
-        <span th:text="${contracts.customer_id}"/></span>
+
+<!--        <span th:text="${contracts.contract_id}"/></span>-->
+<!--        <span th:text="${contracts.pd_id}"/></span>-->
+<!--        <span th:text="${contracts.tc_id}"/></span>-->
+<!--        <span th:text="${contracts.motorhome_id}"/></span>-->
+<!--        <span th:text="${contracts.customer_id}"/></span>-->
 
 </body>
 </html>

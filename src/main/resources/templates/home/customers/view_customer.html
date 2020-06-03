@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="tableDesign.css">
-    <link rel="stylesheet" href="menustyles.css">
+    <link rel="stylesheet" href="menustyles.css" th:href="@{/menustyles.css}">
 </head>
 <body>
-
-    <h1>Customer details</h1>
-
-    <span th:text="${customers.customer_id}"/></span>
-    <span th:text="${customers.first_name}"/></span>
-    <span th:text="${customers.last_name}"/></span>
-    <span th:text="${customers.contact_id}"/></span>
-    <span th:text="${customers.address_id}"/></span>
-
+<h1>Customer details</h1>
+<table class="ViewTables">
+    <thead>
+    <tr>
+        <th>Customer_ID</th>
+        <th>First_Name</th>
+        <th>Last_Name</th>
+        <th>Contact_ID</th>
+        <th>Address_ID</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="customers: ${customers}">
+        <td th:text="${customers.customer_id}"></td>
+        <td th:text="${customers.first_name}"></td>
+        <td th:text="${customers.last_name}"></td>
+        <td th:text="${customers.contact_id}"></td>
+        <td th:text="${customers.address_id}"></td></tr></tbody></table>
 </body>
 </html>

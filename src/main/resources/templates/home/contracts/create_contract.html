@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="formDesign.css" th:href="@{/formDesign.css}">
     <link rel="stylesheet" href="menustyles.css" th:href="@{/menustyles.css}">
 </head>
 <body>
 <h1>Create new Contract</h1>
-
-<form class="CreationMenus" action="/CreateContract" method="post">
+<form action="/CreateContract" method="post">
     <div><label>Enter Contract ID:</label><br>
         <input type="text" name="contract_id" placeholder="- nothing added -" style="text-align: center"></div>
     <div><label>Enter Pick-up/Drop-Off ID:</label><br>

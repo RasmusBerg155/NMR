@@ -3,18 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="tableDesign.css">
-    <link rel="stylesheet" href="menustyles.css">
+    <link rel="stylesheet" href="menustyles.css" th:href="@{/menustyles.css}">
 </head>
 <body>
 <h1>Customer Addresses</h1>
-<tbody>
-<span th:text="${customeraddresses.address_id}"/>
-<span th:text="${customeraddresses.street_name}"/>
-<span th:text="${customeraddresses.street_no}"/>
-<span th:text="${customeraddresses.city}"/>
-<span th:text="${customeraddresses.country}"/>
-<span th:text="${customeraddresses.zip}"/>
-</tbody>
+<table class="ViewTables">
+    <thead>
+    <tr>
+        <th>Address_ID</th>
+        <th>Street_Name</th>
+        <th>Street_NO</th>
+        <th>City</th>
+        <th>Country</th>
+        <th>ZIP</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="customeraddresses: ${customeraddresses}">
+        <td th:text="${customeraddresses.address_id}"></td>
+        <td th:text="${customeraddresses.street_name}"></td>
+        <td th:text="${customeraddresses.street_no}"></td>
+        <td th:text="${customeraddresses.city}"></td>
+        <td th:text="${customeraddresses.country}"></td>
+        <td th:text="${customeraddresses.zip}"></td></tr></tbody></table>
 </body>
 </html>

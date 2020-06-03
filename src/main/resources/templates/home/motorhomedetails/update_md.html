@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Update Motorhome Details</title>
-    <link rel="stylesheet" href="formDesign.css">
-    <link rel="stylesheet" href="menustyles.css">
+    <link rel="stylesheet" href="menustyles.css" th:href="@{/menustyles.css}">
 </head>
 <body>
     <h1>Update Motorhome Details</h1>
-    <form class="UpdateMenus" action="/UpdateMotorhomeDetails" method="post">
+    <form action="/UpdateMotorhomeDetails" method="post">
         <div><label>Update Detail ID:</label><br>
         <input type="text" name="motorhome_detail_id" th:value="${motorhomedetails.motorhome_detail_id}"></div>
         <div><label>Update Kilometers:</label><br>

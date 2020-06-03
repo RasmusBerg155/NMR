@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Update Customer</title>
-    <link rel="stylesheet" href="formDesign.css">
-    <link rel="stylesheet" href="menustyles.css">
+    <link rel="stylesheet" href="menustyles.css" th:href="@{/menustyles.css}">
 </head>
 <body>
     <h1>Update Customer</h1>
-    <form class="UpdateMenus" action="/updateCustomer" method="post">
+    <form action="/updateCustomer" method="post">
         <div><label>Update Customer ID:</label><br>
         <input type="text" name="customer_id" th:value="${customers.customer_id}"></div>
         <div><label>Update First Name:</label><br>
