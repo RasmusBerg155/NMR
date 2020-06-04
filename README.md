@@ -2,7 +2,7 @@ Installation guide for the NMR Java program:
 
  - In the master branch, clone the program to run 
  - Go to the mysql branch and download or copy 
- the 3NF_EER_SQL.mwb file, and the DB&Diagram Creation.sql
+ the 3NF_EER_SQL.mwb file, and the SQL.test.script.sql
 
 - Run your mysql Workbench, populate your tables and information 
 by using the code from the sql files.
